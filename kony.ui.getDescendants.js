@@ -4,7 +4,7 @@
 
 	var children = includeParent?[containerWidget]:[];
 	if(typeof containerWidget.widgets === "function"){
-		children = containerWidget.widgets();
+		children = children.concat(containerWidget.widgets());
 	}
 
 	for(var k = 0; k < children.length; k++){
