@@ -7,7 +7,7 @@
 
 		for (var property in scope) {
 			if (scope.hasOwnProperty(property)) {
-				s = s.replace("${" + property + "}", scope[property]); 
+				s = s.replace(new RegExp("\\{" + property + "\\}", "g"), scope[property]); 
 			}
 		}
 		return s;
