@@ -3,7 +3,7 @@
 var slice = [].slice,
 	subscriptions = {};
 
-var duplicatesAllowed = true;
+var duplicatesAllowed = false;
 
 var amplify = global.amplify = {
 
