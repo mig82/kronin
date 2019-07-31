@@ -15,6 +15,13 @@
 		}
 	}
 
+	function getFunctionBody(func){
+		var funcString = func.toString();
+		var funcBody = funcString.substring(funcString.indexOf("{"));
+		//funcBody = funcBody.replace(/\n/g, '').replace(/\s{2}/g, ' ');
+		return funcBody;
+	}
+
 	/*exported amplify*/
 	var amplify = global.amplify = {
 
@@ -30,11 +37,24 @@
 		isSubscribed: function (topic, callback){
 			var found = false;
 			for (var i = subscriptions[ topic ].length - 1; i >= 0 ; i--) {
-				//TODO: Invoke equalsFunction instead.
-				if(subscriptions[ topic ][i].callback === callback){
-					found = true;
-					break;
+
+				var existingSubscriptor = subscriptions[ topic ][i].callback;
+
+				//For named functions, compare them directly.
+				if(typeof callback.name === "string" && callback.name.length > 0){
+					if(existingSubscriptor === callback){
+						found = true;
+						break;
+					}
 				}
+				//For unnamed functions stringify, remove anything before the curlys and compare.
+				else{
+					if(getFunctionBody(existingSubscriptor) === getFunctionBody(callback)){
+						found = true;
+						break;
+					}
+				}
+
 			}
 			return found;
 		},
