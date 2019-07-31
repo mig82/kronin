@@ -1,7 +1,7 @@
 /**
  * setAppBarColor - Sets the background color of the Android status bar.
  *
- * @param  {String} color An RGA hex-based color code —e.g. #cc0000 for a dark red.
+ * @param  {String} color An RGB hex-based color code —e.g. #cc0000 for a dark red.
  * @author Miguelángel Fernández
  */
 (() => {
