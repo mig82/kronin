@@ -1,17 +1,29 @@
 ((definition) => {
 	kony.ui.getDescendants = definition;
-})(function getDescendants(containerWidget, includeParent){
+})(function getDescendants(containerWidget, includeParent, test){
 
-	var children = includeParent?[containerWidget]:[];
-	if(typeof containerWidget.widgets === "function"){
-		children = children.concat(containerWidget.widgets());
-	}
-
-	for(var k = 0; k < children.length; k++){
-		var child = children[k];
-		if(typeof child.widgets === "function"){
-			children = children.concat(child.widgets());
+	//A function that given a widget, returns its children matching a test
+	function getChildren(parent, t){
+		var filtered = typeof t === "function";
+		var descendants = [];
+		if(typeof parent.widgets === "function"){
+			let children = parent.widgets();
+			if(filtered) children = children.filter(t);
+			descendants = descendants.concat(children);
 		}
+		return descendants;
 	}
-	return children;
+
+	//If a widget is considered a descendant of itself, then start by putting it in the array.
+	var descendants = includeParent?[containerWidget]:[];
+	if(typeof test === "function") descendants = descendants.filter(test);
+
+	//Then add the children of the parent.
+	descendants = getChildren(containerWidget, test);
+
+	//Then add the children of each child already known.
+	for(var k = 0; k < descendants.length; k++){
+		descendants = getChildren(descendants[k], test);
+	}
+	return descendants;
 });
