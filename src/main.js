@@ -5,5 +5,5 @@ require("./main.js");
 require("./mvc.genAccessors.js");
 require("./mvc.patch.js");
 require("./mvc.router.js");
-require("./os.js");
+require("./getOs.js");
 require("./ui.getDescendants.js");
