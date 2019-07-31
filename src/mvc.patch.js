@@ -21,7 +21,7 @@
 		if(typeof controller[eventName] === "function"){
 			view[eventName] = function(){
 				try{
-					kony.print(`*******Event fired: ${view.id}.${eventName}`);
+					//kony.print(`*******Event fired: ${view.id}.${eventName}`);
 					controller[eventName]();
 				}
 				catch(e){
@@ -46,7 +46,7 @@
 					}
 					else{
 						kony.print(
-							`${view.id}.${component.id}.${event} is ether ` +
+							`${view.id}.${component.id}.${event} is either ` +
 							"not defined or not exposed. Expose it as a custom method."
 						);
 					}
