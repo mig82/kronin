@@ -6,3 +6,6 @@
 
 # Build
 /bin
+
+# Do not version kronin.js in the test project.
+/tests/workspace/KroninTest1/modules/kronin.js
