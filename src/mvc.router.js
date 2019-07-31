@@ -7,7 +7,14 @@
 
 	var history = [];
 	var maxH = 5;
+	var current;
 
+	function _setCurrent(formId){
+		current = formId;
+	}
+	function _getCurrent(){
+		return current;
+	}
 	function _initHistory(){
 		if(typeof history === "undefined"){
 			history = [];
@@ -43,10 +50,6 @@
 		}
 	}
 
-	function _getCurrent(){
-		return history[history.length - 1];
-	}
-
 	function _goBack(context){
 		if(history.length === 0){
 			return;
@@ -71,6 +74,7 @@
 	function _goTo(friendlyName, context, isGoingBack){
 
 		try{
+			//TODO: Make compatible with non-MVC projects.
 			(new kony.mvc.Navigation(friendlyName)).navigate(context);
 			var priorForm = kony.application.getPreviousForm();
 			if(!isGoingBack)_addToHistory(priorForm);
@@ -98,6 +102,7 @@
 		goto: _goTo,
 		goTo: _goTo,
 		getCurrent: _getCurrent,
+		setCurrent: _setCurrent,
 		goBack: _goBack,
 		goHome: _goHome,
 		getHistory : _getHistory

@@ -22,6 +22,11 @@
 			view[eventName] = function(){
 				try{
 					//kony.print(`*******Event fired: ${view.id}.${eventName}`);
+
+					//If this is the preShow event of a form, then update current form in router.
+					if(eventName === "preShow" && view.name === "kony.ui.Form2"){
+						kony.router.setCurrent(view.id);
+					}
 					controller[eventName]();
 				}
 				catch(e){
