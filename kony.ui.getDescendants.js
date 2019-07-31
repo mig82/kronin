@@ -1,3 +1,18 @@
+
+/**
+* getDescendants - Returns an array containing all the widgets nested within a form or container widget.
+* The container widget may be a Form, a Flex Container, Scroll Flex Container or any other widget capable
+* of containing other widgets.
+*
+* @param  {FlexForm|FlexContainer|FlexFormContainer|Segment} containerWidget The parent form or container widget
+* for which you wish to get all descendants.
+* @param  {Boolean} includeParent   Whether to include the parent container widget in the
+* resulting array.
+* @param  {Function} test   A function used to determine which children must be included in the result.
+* @return {Array} An array containing all widgets within a form or container widget.
+*
+* @author Miguelángel Fernández
+*/
 ((definition) => {
 	kony.ui.getDescendants = definition;
 })(function getDescendants(containerWidget, includeParent, test){
