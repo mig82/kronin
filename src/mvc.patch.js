@@ -11,7 +11,9 @@
 		//"onDestroy" //Controllers already have their own onDestroy event.
 		"preShow",
 		"postShow",
-		"onHide"
+		"onHide",
+		"onBreakpointChange",
+		"onOrientationChange"
 	];
 
 	var view = controller.view;
