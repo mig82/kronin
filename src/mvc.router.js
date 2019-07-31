@@ -1,5 +1,9 @@
-/*exported $router*/
-var $router = (function(){
+
+((definition) => {
+	if(typeof kony.router !== "object"){
+		kony.router = definition();
+	}
+})(function(){
 
 	var history = [];
 	var maxH = 5;
@@ -35,7 +39,7 @@ var $router = (function(){
 				history = history.slice(0,1).concat(history.slice(2));
 			}
 			history.push(priorId);
-			kony.print(`********Added ${priorId} to history. length ${history.length}`);
+			//kony.print(`********Added ${priorId} to history. length ${history.length}`);
 		}
 	}
 
@@ -98,4 +102,4 @@ var $router = (function(){
 		goHome: _goHome,
 		getHistory : _getHistory
 	};
-})();
+});
