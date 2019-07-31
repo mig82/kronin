@@ -1,19 +1,9 @@
-(function( global, undefined ) {
+(function(undefined) {
 
 	var slice = [].slice,
 		subscriptions = {};
 
 	var duplicatesAllowed = false;
-
-	function equalsFunction(f1, f2){
-		//If both are anonymous functions.
-		if(f1.name === "" && f2.name === ""){
-			//Stringify the bodies and compare.
-		}
-		else{
-			return f1 === f2;
-		}
-	}
 
 	function getFunctionBody(func){
 		var funcString = func.toString();
@@ -22,8 +12,18 @@
 		return funcBody;
 	}
 
-	/*exported amplify*/
-	var amplify = global.amplify = {
+	function equalsFunction(f1, f2){
+		//If both are named functions.
+		if(f1.name && f2.name){
+			return f1 === f2;
+		}
+		//If both are unnamed functions.
+		else if (!f1.name && !f2.name){
+			return getFunctionBody(f1) === getFunctionBody(f2);
+		}
+	}
+
+	kony.amplify = {
 
 		allowDuplicates: function(allow){
 			duplicatesAllowed = allow;
@@ -38,23 +38,10 @@
 			var found = false;
 			for (var i = subscriptions[ topic ].length - 1; i >= 0 ; i--) {
 
-				var existingSubscriptor = subscriptions[ topic ][i].callback;
-
-				//For named functions, compare them directly.
-				if(typeof callback.name === "string" && callback.name.length > 0){
-					if(existingSubscriptor === callback){
-						found = true;
-						break;
-					}
+				if(equalsFunction(subscriptions[ topic ][i].callback, callback)){
+					found = true;
+					break;
 				}
-				//For unnamed functions stringify, remove anything before the curlys and compare.
-				else{
-					if(getFunctionBody(existingSubscriptor) === getFunctionBody(callback)){
-						found = true;
-						break;
-					}
-				}
-
 			}
 			return found;
 		},
@@ -168,4 +155,4 @@
 			}
 		}
 	};
-}( kony ) );
+}());
