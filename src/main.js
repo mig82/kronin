@@ -1,0 +1,9 @@
+require("./amplify.js");
+require("./application.setAppBarColor.js");
+require("./i18n.getLocalizedString2.js");
+require("./main.js");
+require("./mvc.genAccessors.js");
+require("./mvc.patch.js");
+require("./mvc.router.js");
+require("./os.js");
+require("./ui.getDescendants.js");

@@ -1,1 +1,8 @@
+# NPM
+/node_modules
+
+# JSDoc
 /out
+
+# Build
+/bin
