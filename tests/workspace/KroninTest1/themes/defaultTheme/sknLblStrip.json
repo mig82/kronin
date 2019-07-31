@@ -1,0 +1,100 @@
+{
+  "android": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "androidwearos": {
+    "font_name": "Helvetica"
+  },
+  "background_color": "4b88f1ff",
+  "bg_type": "one",
+  "border_color": "424242ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "fontSizeInPx": false,
+  "font_color": "4b88f1ff",
+  "font_name": "Helvetica",
+  "font_size": 70,
+  "font_style": "normal",
+  "font_weight": "normal",
+  "ipad": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "iphone": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "isDefaultSkin": false,
+  "kiosk": {
+    "font_name": "None",
+    "font_size": 70,
+    "isForked": false
+  },
+  "kuid": "s1cb82c103854acb9a9622460be47c1c",
+  "spaan": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaandroidtablet": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spabb": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaip": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaipad": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spawindowstablet": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spawinphone8": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "tabrcandroid": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "wType": "Label",
+  "watchos": {
+    "font_name": "Helvetica",
+    "font_size": 70,
+    "isForked": false
+  },
+  "windows8": {
+    "font_name": "None",
+    "font_size": 70,
+    "isForked": false
+  },
+  "winphone8": {
+    "font_name": "None",
+    "font_size": 70,
+    "isForked": false
+  }
+}

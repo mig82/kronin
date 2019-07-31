@@ -1,0 +1,32 @@
+{
+    "spaiphone": {
+        "platform": "spaip",
+        "indexjl": "js",
+        "devicemessage": "This device is currently not supported",
+        "deviceexception": "Unknown Error Occurred <br/> Contact System Admin",
+        "importjsfiles": [],
+        "version": "1.0.0",
+        "category": "spaiphone/",
+        "bgcolor": "#ffffff",
+        "enablexfsspa": false,
+        "enablexfs": "false",
+        "isDebug": "false",
+        "csslist": [],
+        "jslist": []
+    },
+    "spaandroid": {
+        "platform": "spaan",
+        "indexjl": "js",
+        "devicemessage": "This device is currently not supported",
+        "deviceexception": "Unknown Error Occurred <br/> Contact System Admin",
+        "importjsfiles": [],
+        "version": "1.0.0",
+        "category": "spaandroid/",
+        "bgcolor": "#ffffff",
+        "enablexfsspa": false,
+        "enablexfs": "false",
+        "isDebug": "false",
+        "csslist": [],
+        "jslist": []
+    }
+}

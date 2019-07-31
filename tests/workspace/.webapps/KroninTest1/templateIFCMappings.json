@@ -1,0 +1,327 @@
+{
+    "controllerTemplateInfoMapping": {
+        "android": {
+            "flxSampleRowTemplateController_mobile": [
+                "flxSampleRowTemplateController"
+            ],
+            "flxSectionHeaderTemplateController_mobile": [
+                "flxSectionHeaderTemplateController"
+            ]
+        },
+        "iphone": {
+            "flxSampleRowTemplateController_mobile": [
+                "flxSampleRowTemplateController"
+            ],
+            "flxSectionHeaderTemplateController_mobile": [
+                "flxSectionHeaderTemplateController"
+            ]
+        },
+        "spaan": {
+            "flxSampleRowTemplateController_mobile": [
+                "flxSampleRowTemplateController"
+            ],
+            "flxSectionHeaderTemplateController_mobile": [
+                "flxSectionHeaderTemplateController"
+            ]
+        },
+        "spaip": {
+            "flxSampleRowTemplateController_mobile": [
+                "flxSampleRowTemplateController"
+            ],
+            "flxSectionHeaderTemplateController_mobile": [
+                "flxSectionHeaderTemplateController"
+            ]
+        }
+    },
+    "controllerformInfoMapping": {
+        "android": {
+            "Form1Controller_mobile": [
+                "Form1Controller"
+            ],
+            "Form2Controller_mobile": [
+                "Form2Controller"
+            ]
+        },
+        "iphone": {
+            "Form1Controller_mobile": [
+                "Form1Controller"
+            ],
+            "Form2Controller_mobile": [
+                "Form2Controller"
+            ]
+        },
+        "spaan": {
+            "Form1Controller_mobile": [
+                "Form1Controller"
+            ],
+            "Form2Controller_mobile": [
+                "Form2Controller"
+            ]
+        },
+        "spaip": {
+            "Form1Controller_mobile": [
+                "Form1Controller"
+            ],
+            "Form2Controller_mobile": [
+                "Form2Controller"
+            ]
+        }
+    },
+    "formControllerInfoMapping": {
+        "android": {
+            "Form1": {
+                "controllerActionDir": "Form1Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form1Controller"
+            },
+            "Form2": {
+                "controllerActionDir": "Form2Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form2Controller"
+            }
+        },
+        "iphone": {
+            "Form1": {
+                "controllerActionDir": "Form1Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form1Controller"
+            },
+            "Form2": {
+                "controllerActionDir": "Form2Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form2Controller"
+            }
+        },
+        "spaan": {
+            "Form1": {
+                "controllerActionDir": "Form1Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form1Controller"
+            },
+            "Form2": {
+                "controllerActionDir": "Form2Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form2Controller"
+            }
+        },
+        "spaip": {
+            "Form1": {
+                "controllerActionDir": "Form1Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form1Controller"
+            },
+            "Form2": {
+                "controllerActionDir": "Form2Controller",
+                "controllerChannel": "mobile",
+                "controllerName": "Form2Controller"
+            }
+        }
+    },
+    "formsifcMapping": {
+        "android": {
+            "Form1": {
+                "controllerInfo": {
+                    "controllerActionName": "Form1Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form1Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form1"
+            },
+            "Form2": {
+                "controllerInfo": {
+                    "controllerActionName": "Form2Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form2Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form2"
+            }
+        },
+        "iphone": {
+            "Form1": {
+                "controllerInfo": {
+                    "controllerActionName": "Form1Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form1Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form1"
+            },
+            "Form2": {
+                "controllerInfo": {
+                    "controllerActionName": "Form2Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form2Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form2"
+            }
+        },
+        "spaan": {
+            "Form1": {
+                "controllerInfo": {
+                    "controllerActionName": "Form1Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form1Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form1"
+            },
+            "Form2": {
+                "controllerInfo": {
+                    "controllerActionName": "Form2Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form2Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form2"
+            }
+        },
+        "spaip": {
+            "Form1": {
+                "controllerInfo": {
+                    "controllerActionName": "Form1Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form1Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form1"
+            },
+            "Form2": {
+                "controllerInfo": {
+                    "controllerActionName": "Form2Controller",
+                    "controllerChannel": "mobile",
+                    "controllerName": "Form2Controller"
+                },
+                "enableModelDriven": false,
+                "friendlyName": "Form2"
+            }
+        }
+    },
+    "templateControllerInfoMapping": {
+        "android": {
+            "SampleRowTemplate": {
+                "controllerActionDir": "flxSampleRowTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSampleRowTemplateController"
+            },
+            "SampleSectionHeaderTemplate": {
+                "controllerActionDir": "flxSectionHeaderTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSectionHeaderTemplateController"
+            }
+        },
+        "iphone": {
+            "SampleRowTemplate": {
+                "controllerActionDir": "flxSampleRowTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSampleRowTemplateController"
+            },
+            "SampleSectionHeaderTemplate": {
+                "controllerActionDir": "flxSectionHeaderTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSectionHeaderTemplateController"
+            }
+        },
+        "spaan": {
+            "SampleRowTemplate": {
+                "controllerActionDir": "flxSampleRowTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSampleRowTemplateController"
+            },
+            "SampleSectionHeaderTemplate": {
+                "controllerActionDir": "flxSectionHeaderTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSectionHeaderTemplateController"
+            }
+        },
+        "spaip": {
+            "SampleRowTemplate": {
+                "controllerActionDir": "flxSampleRowTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSampleRowTemplateController"
+            },
+            "SampleSectionHeaderTemplate": {
+                "controllerActionDir": "flxSectionHeaderTemplateController",
+                "controllerChannel": "mobile",
+                "controllerName": "flxSectionHeaderTemplateController"
+            }
+        }
+    },
+    "templatesifcMapping": {
+        "android": {
+            "flxSampleRowTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSampleRowTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSampleRowTemplateController"
+                },
+                "friendlyName": "flxSampleRowTemplate"
+            },
+            "flxSectionHeaderTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSectionHeaderTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSectionHeaderTemplateController"
+                },
+                "friendlyName": "flxSectionHeaderTemplate"
+            }
+        },
+        "iphone": {
+            "flxSampleRowTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSampleRowTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSampleRowTemplateController"
+                },
+                "friendlyName": "flxSampleRowTemplate"
+            },
+            "flxSectionHeaderTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSectionHeaderTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSectionHeaderTemplateController"
+                },
+                "friendlyName": "flxSectionHeaderTemplate"
+            }
+        },
+        "spaan": {
+            "flxSampleRowTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSampleRowTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSampleRowTemplateController"
+                },
+                "friendlyName": "flxSampleRowTemplate"
+            },
+            "flxSectionHeaderTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSectionHeaderTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSectionHeaderTemplateController"
+                },
+                "friendlyName": "flxSectionHeaderTemplate"
+            }
+        },
+        "spaip": {
+            "flxSampleRowTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSampleRowTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSampleRowTemplateController"
+                },
+                "friendlyName": "flxSampleRowTemplate"
+            },
+            "flxSectionHeaderTemplate": {
+                "controllerInfo": {
+                    "controllerActionName": "flxSectionHeaderTemplateController",
+                    "controllerChannel": "mobile",
+                    "controllerName": "flxSectionHeaderTemplateController"
+                },
+                "friendlyName": "flxSectionHeaderTemplate"
+            }
+        }
+    },
+    "userwidgetsifcMapping": {}
+}

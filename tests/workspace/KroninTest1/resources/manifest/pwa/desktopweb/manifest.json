@@ -1,0 +1,44 @@
+{
+    "theme_color": "#FF0000",
+    "orientation": "any",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "name": "KroninTest1",
+	"id": "KroninTest1",
+    "short_name": "KroninTest1",
+	"start_url": "/apps/KroninTest1/",
+    "icons": [{
+    "src": "kony_48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+	  }, {
+		"src": "kony_71.png",
+		"sizes": "72x72",
+		"type": "image/png"
+	  }, {
+		"src": "kony_88.png",
+		"sizes": "96x96",
+		"type": "image/png"
+	  }, {
+		"src": "kony_150.png",
+		"sizes": "144x144",
+		"type": "image/png"
+	  }, {
+		"src": "kony_150.png",
+		"sizes": "168x168",
+		"type": "image/png"
+	  }, {
+		  "src": "kony_300.png",
+		  "type": "image/png",
+		  "sizes": "192x192"
+    },
+    {
+      "src": "kony_300.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }],
+    "related_applications": [{
+        "platform": "web",
+		"url": "http://localhost:port/apps/KroninTest1/"
+    }]
+}

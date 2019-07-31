@@ -1,0 +1,66 @@
+{
+    "android": {
+        "formslist": {
+            "mvcFormObjects": [
+                "Form1",
+                "Form2"
+            ],
+            "nonmvcFormObjects": []
+        },
+        "templatesList": {
+            "mvcTemplateObjects": [
+                "SampleRowTemplate",
+                "SampleSectionHeaderTemplate"
+            ],
+            "nonmvcTemplateObjects": []
+        }
+    },
+    "iphone": {
+        "formslist": {
+            "mvcFormObjects": [
+                "Form1",
+                "Form2"
+            ],
+            "nonmvcFormObjects": []
+        },
+        "templatesList": {
+            "mvcTemplateObjects": [
+                "SampleRowTemplate",
+                "SampleSectionHeaderTemplate"
+            ],
+            "nonmvcTemplateObjects": []
+        }
+    },
+    "spaan": {
+        "formslist": {
+            "mvcFormObjects": [
+                "Form1",
+                "Form2"
+            ],
+            "nonmvcFormObjects": []
+        },
+        "templatesList": {
+            "mvcTemplateObjects": [
+                "SampleRowTemplate",
+                "SampleSectionHeaderTemplate"
+            ],
+            "nonmvcTemplateObjects": []
+        }
+    },
+    "spaip": {
+        "formslist": {
+            "mvcFormObjects": [
+                "Form1",
+                "Form2"
+            ],
+            "nonmvcFormObjects": []
+        },
+        "templatesList": {
+            "mvcTemplateObjects": [
+                "SampleRowTemplate",
+                "SampleSectionHeaderTemplate"
+            ],
+            "nonmvcTemplateObjects": []
+        }
+    }
+}

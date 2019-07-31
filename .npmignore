@@ -12,3 +12,6 @@
 
 # Sources
 /src
+
+# Visualizer test projects
+/tests
