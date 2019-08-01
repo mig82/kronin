@@ -1,0 +1,48 @@
+{
+    "!define": {
+        "kony.mvc.Navigation.!ret": {
+            "getModel": {
+                "!doc": "This helps to get either app developer’s set model or the model which is returned by the respective form controller. Precedence is for the model set by app developer either using setModel() API or which is passed in Navigation class constrcutor.\n@returns model {JSObject}. A JSObject passed to target form from Navigation object.\n@Available iOS, Android, Windows, SPA\n@Usage <pre>\n var navObject = new kony.mvc.Navigation(“friendlyName”, model);\n var formModel = navObject.getModel();\n </pre>",
+                "!type": "fn()"
+            },
+            "navigate": {
+                "!doc": "This helps to navigate among forms with data. This is an asynchronous API.\n@param params {JSObject} A number represents the angle, in degrees, by which this matrix rotates the coordinate system axes.<b>Optional</b>\n@returns {null}.\n@Available iOS, Android, Windows, SPA\n@Usage <pre>\n var navObject = new kony.mvc.Navigation(“friendlyName”);\n navObject.navigate();\n </pre>",
+                "!type": "fn(params: ?)"
+            },
+            "setModel": {
+                "!doc": "This helps to navigate to a form with same/different/No data model.\n@param model {JSObject} A number represents the angle, in degrees, by which this matrix rotates the coordinate system axes.<b>Mandatory</b>\n@returns {null}.\n@Available iOS, Android, Windows, SPA\n@Usage <pre>\n var navObject = new kony.mvc.Navigation(“friendlyName”);\n var model = { key1: value1, key2: value2 };\n navObject.setModel(model);\n </pre>",
+                "!type": "fn(model: ?)"
+            }
+        }
+    },
+    "!name": "__kony_api__",
+    "kony": {
+        "!doc": "kony API's.\n@class kony\n@returns {kony}",
+        "mvc": {
+            "!doc": "MVC APIs",
+            "Navigation": {
+                "!doc": "This is responsible for creating a Navigation object for a form. App developers can create multiple Navigation objects for single form without model object or with same/different model objects.\n@param friendlyName {String} A string will be used to identify an entry in the registry maintained by the MVC framework that maps the navigation path to the form id and its corresponding controller. <b>Mandatory</b>\n@param model {Object} An optional model object associated with said form. <b>Optional</b>\n@returns Returns the instance of Navigation class.\n@Available iOS, Android, Windows, SPA\n@Usage <pre>\n var navObject = new kony.mvc.Navigation(“friendlyName”, model);\n</pre>",
+                "!type": "fn(friendlyName: ?, model: ?) -> kony.mvc.Navigation.!ret"
+            },
+            "registry": {
+                "!doc": "Registry APIs",
+                "add": {
+                    "!doc": "This API enables the developer to register new form id/name with its controller and friendly name. This function has two overloads.\n@param friendlyName {String} <b>Mandatory</b>\n@param formid {String} <b>Mandatory</b>\n@param controllerName {String} <b>Optional</b>\n@param controllerExtensionName {String} <b>Optional</b>\n@returns {Boolean} True if success. False if it fails. If same friendly name is already registered, return false.\n@Available iOS, Android, Windows, SPA",
+                    "!type": "fn(friendlyName: ?, formid: ?, controllerName: ?, controllerExtensionName: ?) -> bool"
+                },
+                "getControllerName": {
+                    "!doc": "This API enables the developer to retrieve the registered controller name from friendly name.\n@param friendlyName {String} <b>Mandatory</b>\n@returns {String/Null} controller name if it is registered. Otherwise “<viewname>Controller” will registered. Null, if friendly name is not registered.\n@Available iOS, Android, Windows, SPA",
+                    "!type": "fn(friendlyName: ?)"
+                },
+                "getViewName": {
+                    "!doc": "This API enables the developer to retrieve the registered form/template id from friendly name.\n@param friendlyName {String} <b>Mandatory</b>\n@returns {String/Null} view name if it is found. Null, if friendly name is not registered.\n@Available iOS, Android, Windows, SPA",
+                    "!type": "fn(friendlyName: ?)"
+                },
+                "remove": {
+                    "!doc": "This API enables the developer to remove already registered form.\n@param friendlyName {String} <b>Mandatory</b>\n@returns {null}.\n@Available iOS, Android, Windows, SPA",
+                    "!type": "fn(friendlyName: ?)"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,674 @@
+{
+    "!define": {
+        "DataSource.prototype.checkObj.!1": {},
+        "DataSource.prototype.createModelResponse.!0": {
+            "<i>": "+DataSource"
+        },
+        "DataSource.prototype.getByPrimaryKey.!2": {},
+        "DataSource.prototype.getByPrimaryKey.!4": {
+            "access": "string"
+        },
+        "DataSource.prototype.removeById.!0": {
+            "Validator": {},
+            "addAttribute": "kony.mvc.Data.BaseModel.addAttribute",
+            "addRelation": "kony.mvc.Data.BaseModel.addRelation",
+            "clearAllValidators": "kony.mvc.Data.BaseModel.clearAllValidators",
+            "customVerb": "kony.mvc.Data.BaseModel.customVerb",
+            "deRegisterValidator": "kony.mvc.Data.BaseModel.deRegisterValidator",
+            "getAll": "kony.mvc.Data.BaseModel.getAll",
+            "getByCriteria": "kony.mvc.Data.BaseModel.getByCriteria",
+            "getByPrimaryKey": "kony.mvc.Data.BaseModel.getByPrimaryKey",
+            "getNamedValidations": "kony.mvc.Data.BaseModel.getNamedValidations",
+            "isParentOf": "kony.mvc.Data.BaseModel.isParentOf",
+            "isValid": "kony.mvc.Data.BaseModel.isValid",
+            "prototype": {
+                "addAttribute": "kony.mvc.Data.BaseModel.prototype.addAttribute",
+                "getId": "kony.mvc.Data.BaseModel.prototype.getId",
+                "partialUpdate": "kony.mvc.Data.BaseModel.prototype.partialUpdate",
+                "remove": "kony.mvc.Data.BaseModel.prototype.remove",
+                "save": "kony.mvc.Data.BaseModel.prototype.save",
+                "toDBJson": "kony.mvc.Data.BaseModel.prototype.toDBJson",
+                "update": "kony.mvc.Data.BaseModel.prototype.update"
+            },
+            "registerValidator": "kony.mvc.Data.BaseModel.registerValidator",
+            "removeById": "kony.mvc.Data.BaseModel.removeById"
+        },
+        "DataSource.prototype.removeById.!0.Validator.!0": {
+            "<i>": "kony.mvc.Data.BaseModel.registerValidator.!1"
+        },
+        "DataSource.prototype.removeById.!0.Validator.!1": {
+            "<i>": "kony.mvc.Data.BaseModel.Validator.!1.<i>"
+        },
+        "DataSource.prototype.removeById.!2": {},
+        "DataSource.prototype.save.!0": "+kony.mvc.Data.BaseModel",
+        "RepositoryManager.prototype.getAllRepository.!ret": {
+            "!doc": "Edited function definition for intellisence support",
+            "!type": "[+kony.mvc.Data.BaseRepository]"
+        },
+        "RepositoryManager.prototype.getRepository.!ret": "+kony.mvc.Data.BaseRepository",
+        "addAfterWrapper.!ret": {
+            "diy": "fn() -> fn()"
+        },
+        "addAfterWrapper.!ret.diy.!ret": {
+            "!type": "fn()",
+            "<i>": {
+                "after": "methObj.diy.!ret.<i>.after",
+                "before": "methObj.diy.!ret.<i>.before"
+            }
+        },
+        "addBeforeWrapper.!ret": {
+            "diy": {}
+        },
+        "addBeforeWrapper.!ret.diy.!ret": {
+            "<i>": "methObj.diy.!ret.<i>"
+        },
+        "anonymousFuncAdd.!0": {
+            "businessController": "+kony.mvc.Business.Controller"
+        },
+        "anonymousFuncAdd.!1": {},
+        "kony.mvc.Business.Command.!1": "+kony.mvc.Business.Command",
+        "kony.mvc.Data.BaseModel.Validator.!0": {
+            "<i>": "kony.mvc.Data.BaseModel.registerValidator.!1"
+        },
+        "kony.mvc.Data.BaseModel.Validator.!1": {
+            "<i>": {
+                "!doc": "reset all the validataions for property",
+                "!type": "[?]"
+            }
+        },
+        "kony.mvc.Data.BaseModel.prototype.toDBJson.!ret": {},
+        "kony.mvc.Data.BaseModel.registerValidator.!1": "fn() -> bool",
+        "kony.mvc.MDAApplication.getSharedInstance.!ret": "+kony.mvc.MDAApplication",
+        "kony.mvc.util.ProcessorUtils.convertObjectMetadataToFieldMetadataMap.!ret": {},
+        "makeClassDeRegisterFunctionBody.!0": {
+            "<i>": "methObj.diy.!ret"
+        },
+        "makeClassFunctionBody.!0": {},
+        "methObj.diy.!ret": {
+            "!type": "fn()",
+            "<i>": {
+                "after": "[?]",
+                "before": "[?]"
+            }
+        }
+    },
+    "!name": "__kony_api__",
+    "DataSource": {
+        "!type": "fn()",
+        "prototype": {
+            "addOptionsToDTO": "fn(dataObject: ?, dtoOptions: ?)",
+            "checkObj": "fn(criteria: ?, finalCriteria: ?) -> !1",
+            "createModelResponse": "fn(response: DataSource.prototype.createModelResponse.!0, baseModel: fn(), config: ?) -> +DataSource",
+            "customVerb": "fn(BaseModel: fn(), config: ?, customVerb: string, params: ?, onCompletion: ?, headerParams: ?, dtoOptions: ?)",
+            "getAll": "fn(BaseModel: fn(), config: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "getByCriteria": "fn(modelDefination: fn(), config: ?, criteria: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "getByPrimaryKey": "fn(BaseModel: fn(), config: ?, primaryKey: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "partialUpdate": "fn(BaseModel: +kony.mvc.Data.BaseModel, config: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "remove": "fn(BaseModel: +kony.mvc.Data.BaseModel, config: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "removeById": "fn(BaseModel: fn(), config: ?, primaryKey: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "save": "fn(BaseModel: +kony.mvc.Data.BaseModel, config: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)",
+            "update": "fn(BaseModel: +kony.mvc.Data.BaseModel, config: ?, onCompletion: ?, accessMode: kony.mvc.MDAApplication.accessMode, headerParams: ?, dtoOptions: ?)"
+        }
+    },
+    "Expression": {
+        "!type": "fn()",
+        "and": "fn() -> +Expression",
+        "eq": "fn(lexpr: ?, rexpr: ?) -> +Expression",
+        "expr": "string",
+        "lhs": "+Expression"
+    },
+    "ORMSession": {
+        "!type": "fn(appContext: ?)",
+        "prototype": {
+            "get": "fn(QueryBuilder: ?)",
+            "intialize": "fn()",
+            "remove": "fn(QueryBuilder: ?)",
+            "save": "fn(QueryBuilder: ?)"
+        }
+    },
+    "RepositoryManager": {
+        "!type": "fn()",
+        "prototype": {
+            "getAllRepository": {
+                "!doc": "This api is used to get all the repositories which are registered in a repomanager\n@returns {Array} list of repositories\n@usage <pre>\n    var repos= kony.mvc.MDAApplication.getSharedInstance().getRepoManager().getAllRepository();\n</pre>",
+                "!type": "fn() -> [+kony.mvc.Data.BaseRepository]"
+            },
+            "getRepository": {
+                "!doc": "This Api is used to get an instance of repository for a model\n@param  {String} model model name as per repoManagerConfig file\n@returns {BaseRepository} repository instance for model\n@usage <pre>\n   var dummyRepo = kony.mvc.MDAApplication.getSharedInstance().getRepoManager().getRepository(“dummy”);\n</pre>",
+                "!type": "fn(model: string) -> +kony.mvc.Data.BaseRepository"
+            },
+            "initialize": "fn(context: ?)",
+            "initializeRepoConfig": "fn(repoconfig: string)",
+            "setRepository": "fn(modelName: ?, modelPath: ?, configPath: ?, ModelRepository: ?)"
+        }
+    },
+    "UIBinderBuilder": {
+        "!type": "fn()",
+        "prototype": {
+            "getBinder": "fn() -> kony.mvc.MDAApplication.UIBinder",
+            "initialize": "fn()",
+            "register": "fn()"
+        }
+    },
+    "addAfterWrapper": {
+        "!doc": "This Api is the skeleton for addAfter logic\n\n@param {function} invoke  - The existing original function.\n@param {function} newMeth - The new function which has to be executed later in the sequence.\n@returns           retX    - The result after execution of the latest method.",
+        "!type": "fn(invoke: ?|fn(), newMeth: ?) -> addAfterWrapper.!ret"
+    },
+    "addBeforeWrapper": {
+        "!doc": "This Api is the skeleton for addBefore logic\n\n@param {function} invoke  - The existing original function.\n@param {function} newMeth - The new function which has to be executed prior to the sequence.\n@returns           retX    - The result after execution of the latest method.",
+        "!type": "fn(invoke: ?|fn(), newMeth: ?) -> methObj"
+    },
+    "afterArrayProcessing": {
+        "!doc": "This Api is used to process the addAfter methods and deregister them accordingly\n\n@param {string}  key         - The original initial method\n@param {function} meth       - new method",
+        "!type": "fn(key: string, meth: fn()|?)"
+    },
+    "anonymousFuncAdd": {
+        "!doc": "This method is used to set the required assets for calling addAfter method to construct the body for anonymous function\n\n@param {class}    refClass - The prototype of the original class\n@param {JSON}     method   - The existing original function and new function as value.\n@param {boolean}  flag     - deciding factor to construct JSON Object for before or after methods",
+        "!type": "fn(claz: anonymousFuncAdd.!0, method: ?|?, flag: number)"
+    },
+    "attributeMap": {
+        "<i>": {
+            "model": "string",
+            "value": "string"
+        }
+    },
+    "beforeArrayProcessing": {
+        "!doc": "This Api is used to process the addBefore methods and deregister them accordingly\n\n@param {string}  key         - The original initial method\n@param {function} meth       - new method",
+        "!type": "fn(key: string, meth: fn()|?)"
+    },
+    "classAfterArrayProcessing": {
+        "!doc": "This Api is used to process the addAfter methods and deregister them accordingly\n\n@param {class}   refClass- The class which contains prototype of the original class.\n@param {string}  key         - The original initial method\n@param {function} meth       - new method",
+        "!type": "fn(refClass: ?, key: string, meth: ?)"
+    },
+    "classBeforeArrayProcessing": {
+        "!doc": "This Api is used to process the addBefore methods and deregister them accordingly\n\n@param {class}   refClass- The class which contains prototype of the original class.\n@param {string}  key         - The original initial method\n@param {function} meth       - new method",
+        "!type": "fn(refClass: ?, key: string, meth: ?)"
+    },
+    "classMemberAdd": {
+        "!doc": "This method is used to set the required assets for calling addAfter method to construct the body for class\n\n@param {class}      claz - The prototype of the original class\n@param {function} meth    - new method\n@param {boolean}  flag     - deciding factor to construct JSON Object for before or after methods",
+        "!type": "fn(claz: anonymousFuncAdd.!0, method: ?|?, flag: number|bool)"
+    },
+    "deRegisterAnonyFunc": {
+        "!doc": "This Api is used to call the methods for deRegistering purpose\n\n@param {class}    claz    - The class which contains various methods\n@param {function} meth    - new method",
+        "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: makeClassDeRegisterFunctionBody.!0)"
+    },
+    "deRegisterClassMember": {
+        "!doc": "This Api is used to call the methods for deRegistering purpose\n\n@param {class}    claz    - The class which contains various methods\n@param {function} method    - new method",
+        "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+    },
+    "errorObject": {
+        "!doc": "callback sends status, data, error",
+        "errcode": "number",
+        "errmsg": "string"
+    },
+    "errorobject": {
+        "!doc": "callback sends status, data, error",
+        "errcode": "number",
+        "errmsg": "string"
+    },
+    "innerLevelObject": {
+        "after": "[?]",
+        "before": "[?]"
+    },
+    "innerinnerObject": {},
+    "jsonForFunction": {
+        "!doc": "This json Object is used for deregister purpose by holding the key as function name and value as JSONObject",
+        "<i>": {
+            "<i>": {
+                "after": "[?]",
+                "before": "[?]"
+            }
+        }
+    },
+    "kony": {
+        "mvc": {
+            "Business": {
+                "Command": {
+                    "!type": "fn(id: ?, context: ?, completionCallback: ?, alias: ?)",
+                    "prototype": {
+                        "execute": "fn()",
+                        "getAlias": "fn() -> !this.alias",
+                        "getCompletionCallback": "fn() -> !this.completionCallback",
+                        "getContext": "fn() -> !this.context",
+                        "getId": "fn() -> !this.id",
+                        "setAlias": "fn(alias: ?)",
+                        "setCompletionCallback": "fn(completionCallback: ?)",
+                        "setContext": "fn(context: ?)",
+                        "setId": "fn(id: ?)"
+                    }
+                },
+                "CommandHandler": {
+                    "!type": "fn(commandId: ?, commandHandlerExtension: ?)",
+                    "prototype": {
+                        "execute": {
+                            "!doc": "All the logic for the command that is associated with it will go in this method. When business controller execute any command the command execution engine will execute this method of command handler associated with that command\n@param  {kony.mvc.Business.Command} command Object of type command\n@returns {null}",
+                            "!type": "fn(command: +kony.mvc.Business.Command)"
+                        },
+                        "sendResponse": {
+                            "!doc": "When execute of Command Handler is called after executing the logic it will call sendResponse method to send response back to completionCallback. sendResponse method will generate a object of type CommandResponse and call the completionCallback with the appropriate response.\n@param  {kony.mvc.Business.Command} command Object of type command\n@param {number} responseCode whatever response code we want to send back to completionCallback\n@param {Object} whatever response came after executing the command logic\n@returns {null}\n@usage <pre>\n   this.sendResponse(command , kony.mvc.constants.STATUS_SUCCESS , responseData);\n</pre>",
+                            "!type": "fn(command: +kony.mvc.Business.Command, responseCode: number, responseData: ?)"
+                        },
+                        "validate": {
+                            "!doc": "Validates the information sent as a context\n@returns {null}",
+                            "!type": "fn()"
+                        }
+                    }
+                },
+                "Controller": {
+                    "!type": "fn()",
+                    "cmdEngine": {
+                        "!doc": "this.context = context;",
+                        "commandHandlers": "[?]"
+                    },
+                    "prototype": {
+                        "execute": {
+                            "!doc": "This method will execute the command passed as a parameters.\n@param  {kony.mvc.Business.Command} command Object of type command\n@returns {null}\n@usage <pre>\n   function completionCallBack(response){\n     something();\n   }\n   this.businessController.execute(new kony.mvc.Business.Command(“commandID” , context , completionCallBack ));\n</pre>",
+                            "!type": "fn(command: +kony.mvc.Business.Command)"
+                        },
+                        "executeCommand": "fn(command: ?, params: ?)",
+                        "initializeBusinessController": "fn()",
+                        "registerCommandHandlers": {
+                            "!doc": "This method is used to registers all the command handlers with the business controller from the module configuration file.\nThis process is automatically handled by MDAModule while setting up business controller.\n@param  {Array of JSON objects} List of JSONs with command Id and command Handler name.\n@returns {null}\n@usage <pre>\n   Var commandHandlers = [\n       {\n           ‘CommandId’ : ‘commandID’,\n           ‘CommandHandler’ : ‘CommandhandlerName’\n       },\n       {\n           ‘CommandId’ : ‘commandID2’,\n           ‘CommandHandler’ : ‘CommandhandlerName2’\n\n       }\n   ];\n   this.businessController.registerCommandHandlers(commandHandlers);\n</pre>",
+                            "!type": "fn(commandHandlers: ?)"
+                        }
+                    }
+                },
+                "Delegator": {
+                    "!type": "fn()",
+                    "prototype": {
+                        "super": "fn(methodName: ?, argList: ?)"
+                    }
+                }
+            },
+            "Data": {
+                "BaseModel": {
+                    "!type": "fn()",
+                    "Validator": "fn(injectedNamedValMap: ?, injectedPropertyValMap: ?)",
+                    "addAttribute": {
+                        "!doc": "Adds new attribute and value to existing model\n@param {string} attributeKey\n@param {string} attributeValue\n@param {string} modelName",
+                        "!type": "fn(attributeKey: string, attributeValue: string, modelName: string)"
+                    },
+                    "addRelation": "fn(relationObject: ?)",
+                    "clearAllValidators": "fn(forPropName: ?)",
+                    "customVerb": {
+                        "!doc": "This api is used fetch data for the specified model using specified customVerb.\n@param  {String} customVerb name of the custom verb to be executed\n@param  {JSON} params parameters to be passed to the custom verb in the form of json.\n@param  {function} onCompletion callback function\n@param {object} options\n@returns {null}",
+                        "!type": "fn(customVerb: string, params: ?, onCompletion: ?, options: ?)"
+                    },
+                    "deRegisterValidator": "fn(validationName: ?)",
+                    "getAll": {
+                        "!doc": "* This api is used to get all models for a specified model in the backend.\n* @param  {function} onCompletion callback function\n* @param  {json} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n* @param {object} options\n* @returns {null}\n* @usage <pre>\n   var leavemodeldefination=\n   kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"leave\");\n\n   function callback(status,res,err){\n             kony.print(JSON.stringify(res));\n   }\n   leavemodeldefination.getAll(callback);\n  </pre>",
+                        "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                    },
+                    "getByCriteria": {
+                        "!doc": "* This api fetches data for the specified model based on the criteria passed.\n* @param  {Json} criteria expression object representing criteria.\n* @param  {function} onCompletion callback function\n* @param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n* @param {object} options\n* @returns {null}\n* @usage <pre>\n     var statusdefination=\n     kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"Status\");\n\n     function callback(status,res,err){\n         if(status==kony.mvc.constants.STATUS_SUCCESS)\n             kony.print(JSON.stringify(res));\n     }\n     var criteria=kony.mvc.Expression.eq(“leave.id”,”3”);\n      statusdefination.getByCriteria(criteria,callback);\n  </pre>",
+                        "!type": "fn(criteria: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                    },
+                    "getByPrimaryKey": {
+                        "!doc": "* This api is used to fetch specified model based on the primary key\n* @param  {String/JSON} primaryKey   primitive in case of one primary key and json in case of composite primary key\n* @param  {function} onCompletion callback function\n* @param  {JSON} accessMode   json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n* @param {object} options\n* @returns {null}\n* @usage <pre>\n     var statusdefination = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"Status\");\n\n     function callback (status,res,err){\n     if(status==kony.mvc.constants.STATUS_SUCCESS)\n         kony.print(JSON.stringify(res));\n     }\n     statusdefination.getByPrimaryKey(1, callback);\n </pre>",
+                        "!type": "fn(PrimaryKey: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                    },
+                    "getNamedValidations": "fn()",
+                    "isParentOf": "fn(child: ?)",
+                    "isValid": "fn(obj: ?, propName: ?, value: ?)",
+                    "prototype": {
+                        "addAttribute": {
+                            "!doc": "Adds new attribute and value to existing model instance\n@param {string} attributeKey\n@param {string} attributeValue\n@param {string} modelName",
+                            "!type": "fn(attributeKey: string, attributeValue: string, modelName: string)"
+                        },
+                        "getId": "fn() -> !this.<i>",
+                        "partialUpdate": {
+                            "!doc": "This api is used to partially update a model in the backend.\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode   json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"leave\");\n   function callback(status,response,err){\n       if(status==kony.mvc.constants.STATUS_SUCCESS)\n       {\n         response.no_of_hours=\"16\";\n         response.partialUpdate(function(status,res,err){\n             if(status==kony.mvc.constants.STATUS_SUCCESS)                                                                                                                                 if(status==kony.mvc.constants.STATUS_SUCCESS)\n                 kony.print(JSON.stringify(res);\n         });\n       }\n    }\n    leavemodel.getByPrimaryKey({\"id\":\"111110\",\"employee_id\":\"910067\"}, callback);\n</pre>",
+                            "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "remove": {
+                            "!doc": "This api is used to delete a model in the backend.\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode   json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}",
+                            "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "save": {
+                            "!doc": "This api saves the model in the backend\n@param  {function} onCompletion callback function.\n@param  {JSON} accessMode   json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodeldefination=\n   kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"leave\");\n   var leavemodel=new leavemodeldefination({\"employee_id\":\"1300065\",\"id\":\"12345\"});\n   leavemodel.no_of_hours=\"12\";\n\n   function callback (status,res,err){\n     if(status==kony.mvc.constants.STATUS_SUCCESS)\n              kony.print(\"saved \"+JSON.stringify(res));\n   }\n   leavemodel.save(callback);\n</pre>",
+                            "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "toDBJson": "fn(config: ?) -> kony.mvc.Data.BaseModel.prototype.toDBJson.!ret",
+                        "update": {
+                            "!doc": "This api is used to update a model in the backend.\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode  json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"leave\");\n   function callback(status,response,err){\n       if(status==kony.mvc.constants.STATUS_SUCCESS)\n       {\n         response.no_of_hours=\"16\";\n         response.update(function(status,res,err){                                                                                                                                    if(status==kony.mvc.constants.STATUS_SUCCESS)\n             kony.print(JSON.stringify(res);\n         });\n       }\n    }\n    leavemodel.getByPrimaryKey({\"id\":\"111110\",\"employee_id\":\"910067\"}, callback);\n</pre>",
+                            "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                        }
+                    },
+                    "registerValidator": "fn(propName: ?, validationFn: ?, validationName: ?)",
+                    "removeById": {
+                        "!doc": "* This api is used to delete a model in the backend based on id which is nothing but primary key.\n* @param {JSON/STRING} is primitive in case of one primary key and json in case of composite primary key\n* @param  {function} onCompletion callback function\n* @param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n* @param {object} options\n* @returns {null}\n* @usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefination(\"leave\");\n\n   function callback(status,response,err){\n       kony.print(status);\n   }\n   leavemodel.removeById({\"id\":\"111110\",\"employee_id\":\"910067\"},callback);\n  </pre>",
+                        "!type": "fn(primaryKey: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                    }
+                },
+                "BaseRepository": {
+                    "!type": "fn(modelDefinition: fn(), config: ?, injectedDataSource: ?)",
+                    "datasource": "+DataSource",
+                    "prototype": {
+                        "clearHeaderParams": "fn()",
+                        "customVerb": {
+                            "!doc": "This api is used fetch data for the specified model using specified customVerb\n@param  {String} customVerb name of the custom verb to be executed\n@param  {JSON} params parameters in the form of key value pairs\n@param  {function} onCompletion callback function\n@param {object} options\n@returns {null}",
+                            "!type": "fn(customVerb: string, params: ?, onCompletion: ?, options: ?)"
+                        },
+                        "getAll": {
+                            "!doc": "This api is used to get all models for a specified model in the backend.\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   function callback(status,res,err){\n     kony.print(JSON.stringify(res));\n   }\n   var leaveRepo= MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n   leaveRepo.getAll(callback);\n</pre>",
+                            "!type": "fn(onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "getByCriteria": {
+                            "!doc": "This api fetches data for the specified model based on the criteria passed\n@param  {Json} criteria expression object representing criteria\n@param  {function} onCompletioncallback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n  function callback(status,res,err){\n     if(status==kony.mvc.constants.STATUS_SUCCESS)\n         kony.print(JSON.stringify(res));\n  }\n  var criteria=kony.mvc.Expression.eq(“leave.id”,”3”);\n  var statusRepo= MDAApplication.getSharedInstance().getRepoManager().getRepository(“status”);\n  statusRepo.getByCriteria(criteria,callback);\n</pre>",
+                            "!type": "fn(criteria: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "getByPrimaryKey": {
+                            "!doc": "This api is used to fetch specified model based on the primary key\n@param  {String/JSON} primaryKey   primitive in case of one primary key and json in case of composite primary key\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   function callback (status,res,err){\n     if(status==kony.mvc.constants.STATUS_SUCCESS)\n              kony.print(\"saved \"+JSON.stringify(res));\n   }\n   var statusRepo= kony.mvc.MDAApplication.getSharedInstance().getRepoManager().getRepository(“Status”);\n   statusRepo.getByPrimaryKey(1,callback);\n</pre>",
+                            "!type": "fn(PrimaryKey: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "initialize": "fn(context: ?)",
+                        "partialUpdate": {
+                            "!doc": "Method Description This api is used to partially update a model in the backend.\n@param  {BaseModel} modelInstance model object\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefinition(\"leave\");\n   function callback(status,response,err){\n       if(status==kony.mvc.constants.STATUS_SUCCESS)\n       {\n         response.no_of_hours=\"16\";\n         var leaveRepo = MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n         leaveRepo.update(response,function(status,res,err){\n             if(status==kony.mvc.constants.STATUS_SUCCESS)                                                                                                                                  if(status==kony.mvc.constants.STATUS_SUCCESS)\n                 kony.print(JSON.stringify(res);\n         });\n       }\n    }\n    leavemodel.getByPrimaryKey({\"id\":\"111110\",\"employee_id\":\"910067\"}, callback);\n</pre>",
+                            "!type": "fn(modelInstance: +kony.mvc.Data.BaseModel, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "remove": {
+                            "!doc": "This api is used to delete a model in the backend.\n@param  {BaseModel} modelInstance model object\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefinition(\"leave\");\n   function callback(status,response,err){\n       if(status==kony.mvc.constants.STATUS_SUCCESS)\n       {\n         response.no_of_hours=\"16\";\n         var leaveRepo = MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n         leaveRepo.remove(response,function(status,res,err){\n             if(status==kony.mvc.constants.STATUS_SUCCESS)                                                                                                                                  if(status==kony.mvc.constants.STATUS_SUCCESS)\n                 kony.print(JSON.stringify(res);\n         });\n       }\n    }\n    leavemodel.getByPrimaryKey({\"id\":\"111110\",\"employee_id\":\"910067\"}, callback);\n</pre>",
+                            "!type": "fn(modelInstance: +kony.mvc.Data.BaseModel, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "removeById": {
+                            "!doc": "This api is used to delete a model in the backend based on id which is nothing but primary key\n@param  {BaseModel} modelInstance model object\n@param {JSON/STRING} primaryKey primary key value or json representing the key and value\n@param  {function} onCompletion success callback\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefinition(\"leave\");\n\n   function callback(status,response,err){\n       kony.print(status);\n   }\n   var leaveRepo= MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n   leaveRepo.removeById({\"id\":\"111110\",\"employee_id\":\"910067\"},callback);\n</pre>",
+                            "!type": "fn(modelInstance: fn(), primaryKey: ?, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "save": {
+                            "!doc": "This api saves the model in the backend\n@param  {BaseModel} modelInstance model object\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodeldefination=\n   Kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefinition(\"leave\");\n   var leavemodel=new leavemodeldefination({\"employee_id\":\"1300065\",\"id\":\"12345\"});\n   leavemodel.no_of_hours=\"12\";\n   var leaveRepo= kony.mvc.MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n\n   function callback (status,res,err){\n     if(status==kony.mvc.constants.STATUS_SUCCESS)\n              kony.print(\"saved \"+JSON.stringify(res));\n   }\n   leaveRepo.save(leavemodel,callback);\n</pre>",
+                            "!type": "fn(modelInstance: +kony.mvc.Data.BaseModel, onCompletion: ?, accessMode: ?, options: ?)"
+                        },
+                        "setHeaderParams": "fn(headers: ?)",
+                        "update": {
+                            "!doc": "This api is used to update a model in the backend.\n@param  {BaseModel} modelInstance model object\n@param  {function} onCompletion callback function\n@param  {JSON} accessMode json specifing access mode, {“access”:”online”},it is an optional parameter, if not passed the api uses the default app mode. <b>Optional</b>\n@param {object} options\n@returns {null}\n@usage <pre>\n   var leavemodel = kony.mvc.MDAApplication.getSharedInstance().ModelStore.getModelDefinition(\"leave\");\n   function callback(status,response,err){\n       if(status==kony.mvc.constants.STATUS_SUCCESS)\n       {\n         response.no_of_hours=\"16\";\n         var leaveRepo = MDAApplication.getSharedInstance().getRepoManager().getRepository(“leave”);\n         leaveRepo.update(response,function(status,res,err){                                                                                                                                    if(status==kony.mvc.constants.STATUS_SUCCESS)\n             kony.print(JSON.stringify(res);\n         });\n       }\n    }\n    leavemodel.getByPrimaryKey({\"id\":\"111110\",\"employee_id\":\"910067\"}, callback);\n</pre>",
+                            "!type": "fn(modelInstance: +kony.mvc.Data.BaseModel, onCompletion: ?, accessMode: ?, options: ?)"
+                        }
+                    }
+                }
+            },
+            "Expression": "Expression",
+            "MDAApplication": {
+                "!type": "fn()",
+                "UIBinder": {},
+                "accessMode": {
+                    "access": "string"
+                },
+                "getSharedInstance": {
+                    "!doc": "This method will check if the appInstance variable is null or not. If it is null it will create an object of type MDAApplication assign it to appInstance and return it\n@returns {MDAApplication} Object of type MDAApplication",
+                    "!type": "fn() -> +kony.mvc.MDAApplication"
+                },
+                "modelStore": {
+                    "getConfig": "fn(modelName: ?)",
+                    "getModelDefinition": "fn(modelName: ?)"
+                },
+                "moduleManager": {},
+                "oDataQueryFlag": "bool",
+                "prototype": {
+                    "UIBinder": {
+                        "map": {
+                            "<i>": {
+                                "!doc": "Mapping widget with its mapper"
+                            }
+                        }
+                    },
+                    "accessMode": {
+                        "access": "string"
+                    },
+                    "getAppMode": {
+                        "!doc": "Returns accessMode\n@returns {JSON}",
+                        "!type": "fn() -> !this.accessMode"
+                    },
+                    "getModuleManager": {
+                        "!doc": "Returns moduleManager\n@returns {ModuleManager} Object of type ModuleManager",
+                        "!type": "fn() -> !this.moduleManager"
+                    },
+                    "getODataStatus": "fn() -> !this.oDataQueryFlag",
+                    "getRepoManager": {
+                        "!doc": "Returns repositoryManager\n@returns {RepositoryManager} Object of type Repository manager",
+                        "!type": "fn() -> !this.repositoryManager"
+                    },
+                    "getUIBinder": {
+                        "!doc": "Returns UIBinder\n@returns {UIBinder} Object of type UIBinder",
+                        "!type": "fn() -> !this.UIBinder"
+                    },
+                    "initialize": {
+                        "!doc": "This method will create and set up repository manager, module manager , UIBinder , appContext , accessMode and scope.\n@returns {null}",
+                        "!type": "fn()"
+                    },
+                    "modelStore": {
+                        "getConfig": "kony.mvc.MDAApplication.modelStore.getConfig",
+                        "getModelDefinition": "kony.mvc.MDAApplication.modelStore.getModelDefinition"
+                    },
+                    "moduleManager": {
+                        "moduleMap": {
+                            "<i>": {
+                                "businessController": "+kony.mvc.Business.Controller",
+                                "channel": "string",
+                                "moduleMode": "string",
+                                "moduleName": "string",
+                                "navigator": "kony.mvc.Presentation.BasePresenter.navigator",
+                                "presentationController": "+kony.mvc.Presentation.BasePresenter"
+                            }
+                        }
+                    },
+                    "oDataQueryFlag": "bool",
+                    "repositoryManager": "+RepositoryManager",
+                    "setAppMode": {
+                        "!doc": "Sets key access of accessMode field to appMode\n@param {String} appMode Application mode\n@returns {null}",
+                        "!type": "fn(appMode: string)"
+                    },
+                    "setModuleManager": {
+                        "!doc": "Sets the moduleManager field as passed in the parameter\n@param {ModuleManager} Object of type ModuleManager\n@returns {null}",
+                        "!type": "fn(moduleManagerInstance: ?)"
+                    },
+                    "setOdataStatus": "fn(flag: ?)",
+                    "setRepoManager": {
+                        "!doc": "Sets the repositoryManager field as passed in the parameter\n@param {RepositoryManager} repoManagerInstance Object of type RepositoryManager\n@returns {null}",
+                        "!type": "fn(repoManagerInstance: +RepositoryManager)"
+                    },
+                    "setUIBinder": {
+                        "!doc": "Sets UIBinder field as passed in parameter\n@param {UIBinder} uiBinderInstance Object of type UIBinder",
+                        "!type": "fn(uiBinderInstance: ?)"
+                    }
+                },
+                "repositoryManager": "+RepositoryManager"
+            },
+            "MDAFormController": {
+                "!type": "fn(viewId1: ?)",
+                "prototype": {
+                    "attachToModule": {
+                        "!doc": "This method is used to attach a modules presenter to the view controller. This is just a workaround method as startup form loads by using navigation object.\n@param  {MDAModule} module\n@returns {null}",
+                        "!type": "fn(module: ?)"
+                    },
+                    "didUpdateUI": {
+                        "!doc": "This is the method which is called just after the UIBinder map data process.\nThis method can be overridden in the view controller and the view model can be made to use here.\n@param {Object} context\n@returns {null}",
+                        "!type": "fn(context: ?)"
+                    },
+                    "raiseEvent": {
+                        "!doc": "Event are raised when the view level actions are invoked and these events are sent back to presentation layer using this method.\n@param  {String} eventId      Event name or id\n@param  {Object} eventContext\n@returns {null}",
+                        "!type": "fn(eventId: string, eventContext: ?)"
+                    },
+                    "setStartupContext": "fn()",
+                    "shouldUpdateUI": {
+                        "!doc": "This method in the MDAFormController tells the updateUI method whether to update the form with the viewModel or not. The binding process in done with UIBinder if this method returns true and the UIBinding won’t happen if it returns false.\nThis method can be overridden in the view controller and the view model can be made to use here.\n@param {Object} context\n@returns {null}",
+                        "!type": "fn(context: ?) -> bool"
+                    },
+                    "super": "fn(methodName: ?, argList: ?)",
+                    "willUpdateUI": {
+                        "!doc": "This is the method which is called just before UIBinder map data process.\n@param {Object} context\n@returns {null}",
+                        "!type": "fn(context: ?)"
+                    }
+                }
+            },
+            "Presentation": {
+                "BasePresenter": {
+                    "!type": "fn()",
+                    "businessController": "+kony.mvc.Business.Controller",
+                    "navigator": {
+                        "presentationController": "+kony.mvc.Presentation.BasePresenter"
+                    },
+                    "prototype": {
+                        "_onEventRaised": {
+                            "!doc": "The events that the MDAFormController handles are passed back to the MDABasePresenter.The presenter handles these events by calling the method in the presentation layer. These methods have a signature as follows ---- on<EventId>()\n@param  {ViewController} sender       The sender parameter has the sending view/form controllers instance\n@param  {String} eventId      The event id consists of the name with which tag the event has been raised\n@param  {Object} eventContext The third parameter is the context information that the raiser of the event has passed\n@returns {null}",
+                            "!type": "fn(sender: ?, eventId: string, eventContext: ?)"
+                        },
+                        "asyncUpdateUI": "fn(uiTag: ?, context: ?)",
+                        "attachBackPresentationFlow": {
+                            "!doc": "The presentation controller shows multiple screens, and the order in which the screens are showed are placed in a stack object. This allows to navigate back to the previous screen. This back navigation can be manipulated in such a way that, this back flow of displaying forms can introduce a new form in between. This API allows such feature.\n@param  {String} formName The back presentation flow, to introduce a new form, it requires a formId/formName\n@param  {Obejct} context  This is the viewModel object with which we want the screen to be displayed with\n@returns {null}",
+                            "!type": "fn(formName: string, context: ?)"
+                        },
+                        "clearPresentationStackUntil": {
+                            "!doc": "This API clears all forms in the stack until the formName which is been displayed. This technically means that a complete flow has to be removed from the stack.\\n NOTE: This API has to be called during session related logic like logout/signout, because the stack contains the context and this has to be cleared.\n@param  {String} formName The formName which is a part of the stack/back flow. Until this form(formExcluded) all the forms get removed. Post this for the back flow logic to work fine, we need to display the screen with this formName\n@returns {null}",
+                            "!type": "fn(formName: string)"
+                        },
+                        "detachFromPresentationFlow": {
+                            "!doc": "The presentation controller shows multiple screens, and the order in which the screens are showed are placed in a stack object. This allows to navigate back to the previous screen. This back navigation can be manipulated in such a way that, this back flow of displaying forms can remove/detach one of the form. This API allows such feature\n@param  {String} formName The back presentation flow, to detach form from stack, it requires a formId/formName\n@returns {null}",
+                            "!type": "fn(formName: string)"
+                        },
+                        "getCurrentForm": {
+                            "!doc": "This API returns the fromId which is currently been displayed. Internally it returns the stack top element\n@returns {String} Form ID value",
+                            "!type": "fn() -> string"
+                        },
+                        "initialize": "fn()",
+                        "presentPreviousScreen": {
+                            "!doc": "This method displays the previous screen presented by the presentation controller\n@param  {Object} context Context is a viewModel for a form. If some context passed to this method, the previous screen will be presented with this context/viewModel. And if nothing is passed in place of context, the form will be preseted with the previous context with which it has been presented before.\n@returns {null}",
+                            "!type": "fn(context: ?)"
+                        },
+                        "presentUserInterface": {
+                            "!doc": "This method presents the view or form on the display.\n@param  {String} uiTag   The first parameter is the uiTag, which is the form name or id.\n@param  {Object} context The second parameter is the context or any information that is to be passed to the form. The view model is supposed to be passed like this.\n@returns {null}",
+                            "!type": "fn(uiTag: string, context: ?, isBack: bool)"
+                        },
+                        "super": "fn(methodName: ?, argList: ?)"
+                    },
+                    "superParams": {
+                        "counter": "number",
+                        "level": "number",
+                        "refStack": "[?]"
+                    }
+                }
+            },
+            "constants": {
+                "!doc": "constants",
+                "STATUS_ABORT": "number",
+                "STATUS_FAILURE": "number",
+                "STATUS_SUCCESS": "number"
+            },
+            "util": {
+                "ClassExtensionUtility": {
+                    "!type": "fn()",
+                    "prototype": {
+                        "addAfter": {
+                            "!doc": "This function adds a new sequence to an existing member function of a class definition.\nThe new sequence of code is executed after executing the default behaviour\n\n@param {class} claz   - The class for which addAfter functionality has to be extended.\n@param {JSON}  method - The member which has to be extended after to existing member of the class.",
+                            "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+                        },
+                        "addBefore": {
+                            "!doc": "This function adds a new sequence to an existing member function of a class definition.\nThe new sequence of code is executed before executing the default behaviour\n\n@param {class} claz   - The class for which addBefore functionality has to be extended.\n@param {JSON}  method - The member which has to be extended before to existing member of the class.",
+                            "!type": "fn(claz: anonymousFuncAdd.!0, method: ?|?)"
+                        },
+                        "addMethod": {
+                            "!doc": "This function adds a new member function to an existing class definition\n\n@param {class} claz   - The class for which a new member has to be added.\n@param {JSON}  method - The member which has to be added to the class.",
+                            "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+                        },
+                        "deRegister": {
+                            "!doc": "This function deregisters an existing member function of a class definition.\n\n@param {class} claz   - The class for which a member has to be deregistered.\n@param {JSON}  method - The member which has to be deRegistered from the sequence of member in the class.",
+                            "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+                        },
+                        "removeMethod": {
+                            "!doc": "This function removes an existing member function\n\n@param {class} claz       - The class for which a member has to be removed.\n@param {JSON}  method - The member which has to be removed from the class.",
+                            "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+                        },
+                        "updateMethod": {
+                            "!doc": "This function overrides an existing member behaviour with a new behaviour.\n\n@param {class} claz   - The class for which a member has to be updated.\n@param {JSON}  method - The member which has to be updated in the class.",
+                            "!type": "fn(claz: makeClassDeRegisterFunctionBody.!0, method: ?)"
+                        }
+                    }
+                },
+                "InitializeForms": "fn(moduleName: ?)",
+                "Logger": {
+                    "!type": "fn()",
+                    "logExecutionTimes": "fn(targetObject: ?, targetMethod: ?, args: ?)"
+                },
+                "ParallelCommandExecuter": {
+                    "!type": "fn()",
+                    "executeCommands": "fn(businessController: ?, commands: ?, callback: ?)"
+                },
+                "ProcessorUtils": {
+                    "!type": "fn()",
+                    "applyFunction": "fn(fnToApply: ?, val: ?, context: ?)",
+                    "convertObjectMetadataToFieldMetadataMap": "fn(objectMetadata: ?) -> kony.mvc.util.ProcessorUtils.convertObjectMetadataToFieldMetadataMap.!ret",
+                    "getMetadataForObject": "fn(serviceName: ?, objectName: ?, options: ?, successCallback: ?, failureCallback: ?)"
+                }
+            }
+        }
+    },
+    "makeAnonyAddAfterBody": {
+        "!doc": "This function constructs the body for anonymous function in the scenario  of addAfter\n\n@param {string} key                 - The existing original function.",
+        "!type": "fn(key: string)"
+    },
+    "makeAnonyAddAfterDeRegister": {
+        "!doc": "This function reconstructs the body after deRegistering a particular method\n\n@param {string} key                 - The existing original function.",
+        "!type": "fn(key: string)"
+    },
+    "makeAnonyAddBeforeBody": {
+        "!doc": "This function constructs the body for anonymous function in the scenario  of addBefore\n\n@param {string} key                 - The existing original function.",
+        "!type": "fn(key: string)"
+    },
+    "makeAnonyAddBeforeDeRegister": {
+        "!doc": "This function reconstructs the body after deregistering a particular method\n\n@param {string} key                 - The existing original function.",
+        "!type": "fn(key: string)"
+    },
+    "makeAnonymousFuncBody": {
+        "!doc": "This Api calls the function  which constructs the body for anonymous functions either addAfter or addBefore\n\n@param {String} key                 - The name of the anonymous function\n@param {boolean}flag                - Used to decide addAfter or addBefore",
+        "!type": "fn(key: string, flag: number|bool)"
+    },
+    "makeAnonymousFuncDeRegisterBody": {
+        "!doc": "This Api calls the method which constructs the body for anonymous function in the scenario  of deRegistering a method\n\n@param {string} key                 - The existing original function.",
+        "!type": "fn(key: string)"
+    },
+    "makeClassAddAfterBody": {
+        "!doc": "This function reconstructs the body after deRegistering a particular method\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.",
+        "!type": "fn(refClass: ?, key: string)"
+    },
+    "makeClassAddAfterFunctionBody": {
+        "!doc": "This function constructs the body for Class in the scenario  of addAfter\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.",
+        "!type": "fn(refClass: makeClassFunctionBody.!0, key: string)"
+    },
+    "makeClassAddBeforeBody": {
+        "!doc": "This function reconstructs the body after deRegistering a particular method\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.",
+        "!type": "fn(refClass: ?, key: string)"
+    },
+    "makeClassAddBeforeFunctionBody": {
+        "!doc": "This function constructs the body for Class in the scenario  of addBefore\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.",
+        "!type": "fn(refClass: makeClassFunctionBody.!0, key: string)"
+    },
+    "makeClassDeRegisterFunctionBody": {
+        "!doc": "This Api calls the method which constructs the body for class in the scenario  of deRegistering a method\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.",
+        "!type": "fn(refClass: makeClassDeRegisterFunctionBody.!0, key: string)"
+    },
+    "makeClassFunctionBody": {
+        "!doc": "This Api calls the method which constructs the body for class in the scenario  of addAfter or addBefore of a member\n\n@param {class} refClass             - The copy of the original class\n@param {string} key                 - The existing original function.\n@param {boolean} flag               - factor to call addAfter or addBefore.",
+        "!type": "fn(refClass: makeClassFunctionBody.!0, key: string, flag: number|bool)"
+    },
+    "makeClassJson": {
+        "!doc": "This Api is used to construct the json for addAfter and addBefore scenarios\n\n@param {string} key       - original function\n@param {boolean} flag     - deciding factor to construct JSON Object for before or after methods\n@param {function} meth    - new method\n@param {class}   refClass- The class which contains prototype of the original class.",
+        "!type": "fn(key: string, flag: number|bool, method: ?|?, refClass: makeClassFunctionBody.!0)"
+    },
+    "makeClassJsonComplete": {
+        "!doc": "This Api is used to construct the json for addAfter and addBefore scenarios\n\n@param {string} key       - original function\n@param {boolean} flag     - deciding factor to construct JSON Object for before or after methods\n@param {function} meth    - new method\n@param {class}   refClass- The class which contains prototype of the original class.",
+        "!type": "fn(key: string, flag: number|bool, method: ?|?, refClass: makeClassFunctionBody.!0)"
+    },
+    "makeJsonObject": {
+        "!doc": "This Api is used to construct the json for addAfter and addBefore scenarios\n\n@param {boolean} flag     - deciding factor to construct JSON Object for before or after methods\n@param {function} meth    - new method\n@param {string} key       - original function",
+        "!type": "fn(flag: number|bool, meth: ?, key: string)"
+    },
+    "makeJsonObjectComplete": {
+        "!doc": "This Api is used to construct the json for addAfter and addBefore scenarios\n\n@param {boolean} flag     - deciding factor to construct JSON Object for before or after methods\n@param {function} meth    - new method\n@param {string} key       - original function",
+        "!type": "fn(flag: number|bool, meth: ?, key: string)"
+    },
+    "map": {
+        "propName": "string"
+    },
+    "methObj": {
+        "diy": "fn() -> fn()"
+    }
+}

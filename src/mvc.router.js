@@ -1,9 +1,20 @@
-/*exported $router*/
-var $router = (function(){
+
+((definition) => {
+	if(typeof kony.router !== "object"){
+		kony.router = definition();
+	}
+})(function(){
 
 	var history = [];
 	var maxH = 5;
+	var current;
 
+	function _setCurrent(formId){
+		current = formId;
+	}
+	function _getCurrent(){
+		return current;
+	}
 	function _initHistory(){
 		if(typeof history === "undefined"){
 			history = [];
@@ -35,12 +46,8 @@ var $router = (function(){
 				history = history.slice(0,1).concat(history.slice(2));
 			}
 			history.push(priorId);
-			kony.print(`********Added ${priorId} to history. length ${history.length}`);
+			//kony.print(`********Added ${priorId} to history. length ${history.length}`);
 		}
-	}
-
-	function _getCurrent(){
-		return history[history.length - 1];
 	}
 
 	function _goBack(context){
@@ -67,6 +74,7 @@ var $router = (function(){
 	function _goTo(friendlyName, context, isGoingBack){
 
 		try{
+			//TODO: Make compatible with non-MVC projects.
 			(new kony.mvc.Navigation(friendlyName)).navigate(context);
 			var priorForm = kony.application.getPreviousForm();
 			if(!isGoingBack)_addToHistory(priorForm);
@@ -94,8 +102,9 @@ var $router = (function(){
 		goto: _goTo,
 		goTo: _goTo,
 		getCurrent: _getCurrent,
+		setCurrent: _setCurrent,
 		goBack: _goBack,
 		goHome: _goHome,
 		getHistory : _getHistory
 	};
-})();
+});

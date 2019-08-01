@@ -1,0 +1,10 @@
+require("./amplify");
+require("./application.setAppBarColor");
+require("./i18n.getLocalizedString2");
+require("./main");
+require("./mvc.genAccessors");
+require("./mvc.patch");
+require("./mvc.router");
+require("./getOs");
+require("./ui.getDescendants");
+require("./ui.getComponents");

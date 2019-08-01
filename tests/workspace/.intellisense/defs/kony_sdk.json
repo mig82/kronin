@@ -1,0 +1,1665 @@
+{
+    "!define": {
+        "Exception.!ret": {
+            "code": "string",
+            "message": "string"
+        },
+        "kony.logger.createFilePersistor.!ret": {
+            "getPersistorConfig": "fn() -> kony.logger.createFilePersistor.!ret.getPersistorConfig.!ret",
+            "persistorType": {
+                "!doc": "Persistor properites",
+                "!type": "number"
+            }
+        },
+        "kony.logger.createFilePersistor.!ret.getPersistorConfig.!ret": {
+            "properties": {},
+            "type": "number"
+        },
+        "kony.logger.setConfig.!0": {
+            "addPersistor": "fn(val: ?)",
+            "getLoggerConfig": "fn() -> kony.logger.setConfig.!0.getLoggerConfig.!ret",
+            "persistorList": {
+                "!doc": "peristorList",
+                "!type": "[?]"
+            }
+        },
+        "kony.logger.setConfig.!0.getLoggerConfig.!ret": {
+            "accumulatorConfig": {},
+            "formatterConfig": {},
+            "logFilterConfig": {},
+            "persistors": "kony.logger.setConfig.!0.persistorList"
+        },
+        "kony.logger.setPersistorConfig.!0": {
+            "getPersistorConfig": "fn() -> kony.logger.setPersistorConfig.!0.getPersistorConfig.!ret",
+            "persistorType": {
+                "!doc": "persistorType",
+                "!type": "number"
+            }
+        },
+        "kony.logger.setPersistorConfig.!0.getPersistorConfig.!ret": {
+            "properties": {},
+            "type": "number"
+        },
+        "kony.sdk.JavaClasses.import.!ret": {},
+        "kony.sdk.OfflineObjects.createKonySyncProgressCallback.!ret": {
+            "onProgress": "fn(obj: ?)"
+        },
+        "kony.sdk.OfflineObjects.createSyncCallback.!ret": {
+            "onFailure": "fn(error: ?)",
+            "onSuccess": "fn(obj: ?)"
+        },
+        "kony.sdk.SyncV2Classes.import.!ret": {},
+        "kony.sdk.dto.DataObject.prototype.addChildDataObject.!0": "+kony.sdk.dto.DataObject",
+        "kony.sdk.dto.SelectQuery.prototype.addColumn.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.addCriteria.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getColumns.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getCriterias.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getGroups.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getJoins.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getOrders.!ret": "[?]",
+        "kony.sdk.dto.SelectQuery.prototype.getTables.!ret": "[?]",
+        "kony.sdk.dto.Table.prototype.getColumn.!ret": "+kony.sdk.dto.Column",
+        "kony.sdk.getPayload.!ret": {},
+        "kony.sdk.metric.getEventsInBuffer.!ret": "[?]",
+        "kony.sdk.prototype.getIdentityService.!ret": "+IdentityService",
+        "kony.sdk.prototype.getIntegrationService.!ret": "+IntegrationService",
+        "kony.sdk.prototype.getLogicService.!ret": "+kony.sdk.LogicService",
+        "kony.sdk.prototype.getMessagingService.!ret": "+MessagingService",
+        "kony.sdk.prototype.getMetricsService.!ret": "+MetricsService",
+        "kony.sdk.prototype.getObjectService.!ret": "+kony.sdk.OnlineObjectService",
+        "kony.sdk.prototype.getReportingService.!ret": "+ReportingService",
+        "kony.sdk.prototype.getSyncService.!ret": "+konySdkSyncService",
+        "kony.sdk.util.getDateRange.!ret": "[?]",
+        "kony.sdk.util.populateIndividualServiceLists.!0": "+kony.sdk.serviceDoc",
+        "kony.sdk.util.populateIndividualServiceLists.!1": {},
+        "konySdkLogger.prototype.getInstance.!ret": {
+            "debug": "KonySDKLoggerObj.debug",
+            "error": "KonySDKLoggerObj.error",
+            "fatal": "KonySDKLoggerObj.fatal",
+            "getIndirectionLevel": "KonySDKLoggerObj.getIndirectionLevel",
+            "info": "KonySDKLoggerObj.info",
+            "loggerName": "string",
+            "trace": "KonySDKLoggerObj.trace",
+            "warn": "KonySDKLoggerObj.warn"
+        }
+    },
+    "!name": "kony-sdk",
+    "Constants": {
+        "!doc": "Constants defined in kony SDK",
+        "APP_AUTHORIZATION_HEADER": "string",
+        "APP_KEY_HEADER": "string",
+        "APP_SECRET_HEADER": "string",
+        "AUTHORIZATION_HEADER": "string"
+    },
+    "Errors": {
+        "AUTH_FAILURE": "string",
+        "DATA_STORE_EXCEPTION": "string",
+        "INIT_FAILURE": "string",
+        "INTEGRATION_FAILURE": "string",
+        "LOGIC_SERVICE_FAILURE": "string",
+        "MESSAGING_FAILURE": "string",
+        "METRICS_FAILURE": "string",
+        "MISC_FAILURE": "string",
+        "OBJECT_FAILURE": "string",
+        "SYNC_FAILURE": "string",
+        "SYNC_V2_FAILURE": "string"
+    },
+    "Exception": "fn(name: string, message: string) -> Exception.!ret",
+    "IdentityService": {
+        "!doc": "Should not be called by the developer.\n@class\n@classdesc Identity service instance for handling login/logout calls.",
+        "!type": "fn(konyRef: string, rec: string)",
+        "prototype": {
+            "anonymousLoginSync": "fn(options: ?)",
+            "getBackendToken": "fn(fromserver: ?, options: ?, successCallback: ?, failureCallback: ?)",
+            "getProfile": "fn(fromserver: ?, successCallback: ?, failureCallback: ?)",
+            "getProviderName": "fn() -> string",
+            "getProviderType": "fn()",
+            "getSecurityAttributes": "fn(successCallback: ?, failureCallback: ?)",
+            "getUserAttributes": "fn(successCallback: ?, failureCallback: ?)",
+            "getUserData": "fn(successCallback: ?, failureCallback: ?)",
+            "login": "fn(options: ?, successCallback: ?, failureCallback: ?)",
+            "logout": "fn(successCallback: ?, failureCallback: ?, options: ?)",
+            "usePersistedLogin": "fn()"
+        }
+    },
+    "IntegrationService": {
+        "!type": "fn(konyRef: ?, serviceName: ?)",
+        "prototype": {
+            "getBinaryData": "fn(operationName: ?, fileparams: ?, streaming: ?, headers: ?, fileDownloadStartedCallback: ?, chunkDownloadCompletedCallback: ?, fileDownloadCompletedCallback: ?, downloadFailureCallback: ?, options: ?)",
+            "getUrl": "fn() -> string",
+            "invokeOperation": "fn(operationName: ?, headers: ?, data: ?, successCallback: ?, failureCallback: ?, options: ?)",
+            "invokeOperationSync": {
+                "!doc": "This is an internal api to invoke an service synchronously",
+                "!type": "fn(operationName: ?, headers: ?, data: ?)"
+            }
+        }
+    },
+    "KonySDKLoggerObj": {
+        "!doc": "Exposed object and it's methods",
+        "debug": "fn(msg: ?, params: ?)",
+        "error": "fn(msg: string, params: ?)",
+        "fatal": "fn(msg: ?, params: ?)",
+        "getIndirectionLevel": "fn() -> number",
+        "info": "fn(msg: string, params: ?)",
+        "loggerName": "string",
+        "trace": "fn(msg: string, params: ?)",
+        "warn": "fn(msg: string, params: ?)"
+    },
+    "MessagingService": {
+        "!doc": "Should not be called by the developer.\n@class\n@classdesc Messaging service instance for invoking the Messaging services.\n@param konyRef - reference to kony object",
+        "!type": "fn(konyRef: +kony.sdk)",
+        "prototype": {
+            "fetchAllMessages": {
+                "!doc": "Fetch all messages\n@param {number} startIndex - starting index\n@param {number} pageSize - page size\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure\n@param {dictionary} options - {authToken: <Auth Token>}",
+                "!type": "fn(startIndex: number, pageSize: number, successCallback: ?, failureCallback: ?, options: ?)"
+            },
+            "fetchMessageContent": {
+                "!doc": "Fetches the message conetent for a given message id\n@param {string} fetchId - Message id\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure\n@param {dictionary} options - {authToken: <Auth Token>}",
+                "!type": "fn(fetchId: string, successCallback: ?, failureCallback: ?, options: ?)"
+            },
+            "getKSID": "fn() -> string",
+            "getKmsAppId": "fn() -> string",
+            "getUrl": "fn() -> string",
+            "markMessageRead": {
+                "!doc": "Mark the message as read for a given message id\n@param {string} fetchId - Message id\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure\n@param {dictionary} options - {authToken: <Auth Token>}",
+                "!type": "fn(fetchId: string, successCallback: ?, failureCallback: ?, options: ?)"
+            },
+            "register": {
+                "!doc": "register to messaging service\n@param {string} osType - Type of the operating system\n@param {string} deviceId - Device Id\n@param {string} pnsToken - Token value\n@param {string} email - email\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(osType: string, deviceId: string, pnsToken: string, email: string, successCallback: ?, failureCallback: ?)"
+            },
+            "registerGeoBoundaries": {
+                "!doc": "Register for registerGeoBoundaries with given radius\n@param {object} options - JSON Object with radius, pageSize, tags and customLogicCallback\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure of registerGeoBoundary and refreshGeoBoundariesFailure",
+                "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+            },
+            "registerWithAuthToken": {
+                "!doc": "register to messaging service\n@param {string} osType - Type of the operating system\n@param {string} deviceId - Device Id\n@param {string} authToken - Authorization Token\n@param {string} pnsToken - Token value\n@param {string} email - email\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(osType: string, deviceId: string, pnsToken: string, email: string, authToken: string, successCallback: ?, failureCallback: ?)"
+            },
+            "setKSID": "fn(ksid: ?)",
+            "setKmsAppId": "fn(id: ?)",
+            "unregister": {
+                "!doc": "unregister to messaging service\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(successCallback: ?, failureCallback: ?)"
+            },
+            "unregisterWithAuthToken": {
+                "!doc": "unregister to messaging service\n@param {string} authToken - Authorization Token\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(authToken: string, successCallback: ?, failureCallback: ?)"
+            },
+            "updateGeoLocation": {
+                "!doc": "Update the location\n@param {string} latitude - Latitude value\n@param {string} longitude - Longitude value\n@param {string} locationName - Location name\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(latitude: string, longitude: string, locationName: string, successCallback: ?, failureCallback: ?)"
+            },
+            "updateGeoLocationWithAuthToken": {
+                "!doc": "Update the location\n@param {string} latitude - Latitude value\n@param {string} longitude - Longitude value\n@param {string} locationName - Location name\n@param {string} authToken - Authorization Token\n@param {function} successCallback - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+                "!type": "fn(latitude: string, longitude: string, locationName: string, authToken: string, successCallback: ?, failureCallback: ?)"
+            }
+        }
+    },
+    "MetricsService": {
+        "!doc": "Should not be called by the developer.\n@class\n@classdesc Metrics service instance for invoking the Metrics services.",
+        "!type": "fn(konyRef: ?)",
+        "prototype": {
+            "clearBufferEvents": {
+                "!doc": "Clearing events sent to server",
+                "!type": "fn()"
+            },
+            "clearFlowTag": {
+                "!doc": "This method will clear the flow tag set by the user previously.",
+                "!type": "fn()"
+            },
+            "flushEvents": {
+                "!doc": "This method will send the buffered events to the server at once.",
+                "!type": "fn()"
+            },
+            "getEventsInBuffer": {
+                "!doc": "This method will return the a List of the buffered events.\n@return {object} events - list of events stored in buffer.",
+                "!type": "fn() -> ?"
+            },
+            "getFlowTag": {
+                "!doc": "This method will return the a String to set a Flow Tag for the reported events.\n@return {string} flowTag - flow tag set by the user for reporting the events.",
+                "!type": "fn() -> string"
+            },
+            "getSessionId": "fn() -> string",
+            "getUserId": "fn(userId: ?) -> string",
+            "pushEventsToBufferArray": {
+                "!doc": "Pushes events received from user to BufferBackupArray which will be flushed to server",
+                "!type": "fn()"
+            },
+            "readFromDS": {
+                "!doc": "Reading any pending events from Data Store",
+                "!type": "fn()"
+            },
+            "reportError": {
+                "!doc": " * This method takes the event details from the developer and schedule it for sending to server as per Configuration values set by the developer.\n * @param {string} errorCode - errorCode of the reported error. Can be empty if not applicable\n * @param {string} errorType -   errorType of the reported error. Can be empty if not applicable\n * @param {string} errorMessage - errorMessage of the reported error. Can be empty if not applicable\n * @param {json} errorDetails - errorDetails of the reported error as a json string that can have key-value pairs for the following\n\t\t\t\tkeys errfile, errmethod, errline, errstacktrace, formID, widgetID, flowTag.\n * @throws Exception",
+                "!type": "fn(errorCode: string, errorType: string, errorMessage: string, errorDetails: ?)"
+            },
+            "reportHandledException": {
+                "!doc": " * This method takes the event details from the developer and schedule it for sending to server as per Configuration values set by the developer.\n * @param {string} exceptionCode - Code for the reported exception. Can be empty if not applicable\n * @param {string} exceptionType -   Type of the reported exception. Can be empty if not applicable\n * @param {string} exceptionMessage - Message of the reported exception. Can be empty if not applicable\n * @param {json}   exceptionDetails - Details of the reported exception as a JSON string that can have key-value pairs for the\n\t\t\t\tfollowing keys exceptioncode, exceptionfile, exceptionmethod, exceptionline,\n\t\t\t\texceptionstacktrace, formID, widgetID, flowTag.\n * @throws Exception",
+                "!type": "fn(exceptionCode: string, exceptionType: string, exceptionMessage: string, exceptionDetails: ?)"
+            },
+            "saveInDS": {
+                "!doc": "Stores event data in Data Store on failure of service Call",
+                "!type": "fn()"
+            },
+            "sendCustomMetrics": {
+                "!doc": "invoke the sendCustomMetrics operation\n@param {string} reportingGroupID - reporting Group ID\n@param {object} metrics - metrics being reported",
+                "!type": "fn(reportingGroupID: string, metrics: ?)"
+            },
+            "sendEvent": {
+                "!doc": "This method takes the event details from the developer and schedule it for sending to server as per Configuration values set by the developer.\n@param {string} evttype - Event Type for the reported event.\n@param {string} evtSubType - string literal for eventSubType(max 256 Chars)\n@param {string} formID -   string literal for formID(max 256 Chars)\n@param {string} widgetID - string literal for widgetID(max 256 Chars)\n@param {string} flowTag - string literal to override flow tag (max 256 Chars)\n@param {string} metaData - string to describe metaData\n@throws Exception",
+                "!type": "fn(evttype: string, evtSubType: string, formID: string, widgetID: string, flowTag: string, metaData: string)"
+            },
+            "setEventConfig": {
+                "!doc": "This method will take the required values to set the event Configuration values.\n@param {string} confType - sets the Current Configuration Type\n\t\t\t\t\tpossible values BUFFER or INSTANT.\n@param {number} eventBufferAutoFlushCount - event buffer count to auto flush the events\n\t\t\t\t\t\t\t\tpossible values any positive integer\n\t\t\t\t\t\t\t\tDefault value 15\n@param {number} eventBufferMaxCount - Maximum event buffer count to store the events\n\t\t\t\t\t\t\t\tpossible values any positive integer\n\t\t\t\t\t\t\t\tDefault value 1000",
+                "!type": "fn(confType: string, eventBufferAutoFlushCount: number, eventBufferMaxCount: number)"
+            },
+            "setEventTracking": {
+                "!doc": "stub method used for event tracking",
+                "!type": "fn(eventTypes: ?)"
+            },
+            "setFlowTag": {
+                "!doc": "This method will take the a String to set a Flow Tag for the reported events.\n@param {string} flowTag - sets flow tag for reporting the events.",
+                "!type": "fn(flowTag: string)"
+            },
+            "setSessionId": {
+                "!doc": "sets the current sessionId\n@param {string} sessionId",
+                "!type": "fn(sessionId: string)"
+            }
+        }
+    },
+    "OAuthHandler": "fn(serviceUrl: ?, providerName: ?, appkey: ?, callback: ?, type: ?, options: ?, isMFVersionCompatible: ?)",
+    "ReportingService": {
+        "!doc": "Should not be called by the developer.\n@class\n@classdesc Reporting service instance for invoking the reporting services.",
+        "!type": "fn(konyRef: +kony.sdk)",
+        "prototype": {
+            "getUserId": {
+                "!doc": "invoke the getUserId operation",
+                "!type": "fn(userId: ?)"
+            },
+            "report": {
+                "!doc": "invoke the report operation\n@param {string} reportingGroupID - reporting Group ID\n@param {object} metrics - metrics being reported",
+                "!type": "fn(reportingGroupID: string, metrics: ?)"
+            },
+            "setUserId": "fn(userId: ?)"
+        }
+    },
+    "getDeviceIdForIOSPlatform": "fn()",
+    "handleDeeplinkCallback": {
+        "!doc": "Handles the deeplink callback, this needs to be called once deep link redirection is done.\n@param {map} Query parameters from Identity service - \"code\": HashValue\n@param {function} successCallback  - Callback method on success\n@param {function} failureCallback - Callback method on failure",
+        "!type": "fn(params: ?)"
+    },
+    "invokeObjectOperation": {
+        "!doc": "Method is used to send http request for ObjectService operations",
+        "!type": "fn(url: ?, svcid: ?, headers: ?, formData: ?, httpMethod: ?, successCallback: ?, failureCallback: ?, networkProviderOptions: ?)"
+    },
+    "kony": {
+        "logger": {
+            "activatePersistors": "fn(activatedList: ?)",
+            "appLoggerInitialisation": "fn() -> ?",
+            "consolePersistor": "number",
+            "createFilePersistor": "fn() -> kony.logger.createFilePersistor.!ret",
+            "createLoggerConfig": "fn() -> kony.logger.setConfig.!0",
+            "createNetworkPersistor": "fn() -> kony.logger.setPersistorConfig.!0",
+            "createNewLogger": "fn(loggerName: string, loggerConfig: ?) -> KonySDKLoggerObj",
+            "deactivatePersistors": "fn(deactivatedList: ?)",
+            "deviceLogLevelHeader": "string",
+            "filePersistor": "number",
+            "flush": "fn()",
+            "isNativeLoggerAvailable": "fn() -> bool",
+            "logLevel": {
+                "ALL": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "DEBUG": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "ERROR": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "FATAL": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "INFO": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "NONE": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "TRACE": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                },
+                "WARN": {
+                    "code": "string",
+                    "name": "string",
+                    "value": "number"
+                }
+            },
+            "networkPersistor": "number",
+            "networkPersistorUrlEndpoint": "string",
+            "setClaimsToken": {
+                "!doc": "setting claims token after referesh",
+                "!type": "fn()"
+            },
+            "setConfig": "fn(loggerConfig: ?)",
+            "setPersistorConfig": "fn(persistor: ?)"
+        },
+        "mbaas": "kony.sdk",
+        "sdk": {
+            "!doc": "Constructor for creating the kony client instance.\n@class\n@classdesc kony Class\n@memberof kony",
+            "!type": "fn()",
+            "APP_LOGGER_NAME": "string",
+            "DEEPLINK_VALID_PARAM": "string",
+            "IObjectService": {
+                "!type": "fn(konyRef: ?, serviceName: ?)",
+                "prototype": {
+                    "create": "fn(options: ?, successCallback: ?, failureCallback: ?)",
+                    "deleteRecord": {
+                        "!doc": "This method is used to delete a record in the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject)}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "executeSelectQuery": {
+                        "!doc": "This method is used to execute an sql query\n@param queryStr\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(queryStr: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "fetch": {
+                        "!doc": "This method is used to fetch records from the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject)}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getBinaryContent": {
+                        "!doc": "Helps to get the binary content of the specified column on the Object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject), \"responsetype\":\"base64string/filepath(Default)\", \"binaryAttrName\":columnName}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getMetadataOfAllObjects": {
+                        "!doc": "This method is used to retrieve metadata of all objects\n@param options\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getMetadataOfObject": {
+                        "!doc": "This method is used to retrive metadata of a specific object\n@param objectName\n@param options\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(objectName: ?, options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "update": {
+                        "!doc": "This method is used to update a record in the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject)}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    }
+                }
+            },
+            "JavaClasses": {
+                "!doc": "JS Bindings to Java native classes",
+                "import": "fn() -> kony.sdk.JavaClasses.import.!ret"
+            },
+            "KNYObj": {
+                "!type": "fn(name: ?)",
+                "create": "fn(knyObj: ?, record: ?, options: ?, successCallback: ?, failureCallback: ?)",
+                "createSDKObjectSync": "fn(name: ?)",
+                "deleteByPK": "fn(knyObj: ?, options: ?, successCallback: ?, failureCallback: ?)",
+                "get": "fn(knyObj: ?, options: ?, successCallback: ?, failureCallback: ?)",
+                "prototype": {
+                    "create": "fn(record: ?, options: ?, successCallback: ?, failureCallback: ?)",
+                    "deleteByPK": "fn(options: ?, successCallback: ?, failureCallback: ?)",
+                    "get": "fn(options: ?, successCallback: ?, failureCallback: ?)",
+                    "getSdkObjectSync": "fn()",
+                    "rollback": "fn(primaryKeyValueMap: ?, successCallback: ?, failureCallback: ?)",
+                    "startSync": "fn(syncConfig: ?, successCallback: ?, failureCallback: ?, progressCallback: ?)",
+                    "updateByPK": "fn(record: ?, options: ?, successCallback: ?, failureCallback: ?)"
+                },
+                "rollback": "fn(knyObj: ?, primaryKeyValueMap: ?, successCallback: ?, failureCallback: ?)",
+                "startSync": "fn(knyObj: ?, syncConfig: ?, successCallback: ?, failureCallback: ?, progressCallback: ?)",
+                "updateByPK": "fn(knyObj: ?, record: ?, options: ?, successCallback: ?, failureCallback: ?)"
+            },
+            "KNYObjSvc": {
+                "!type": "fn(name: ?)",
+                "createSDKObjectServiceSync": "fn(name: ?)",
+                "prototype": {
+                    "getSdkObjectByName": "fn(name: ?)",
+                    "getSdkObjectServiceSync": "fn()",
+                    "rollback": "fn(successCallback: ?, failureCallback: ?)",
+                    "startSync": "fn(syncConfig: ?, successCallback: ?, failureCallback: ?, progressCallback: ?)"
+                },
+                "rollback": "fn(knyObjSvc: ?, successCallback: ?, failureCallback: ?)",
+                "startSync": "fn(knyObjSvc: ?, syncConfig: ?, successCallback: ?, failureCallback: ?, progressCallback: ?)"
+            },
+            "LAUNCHMODE_DEEPLINK": "number",
+            "LOGGER_NAME": "string",
+            "LogicService": {
+                "!type": "fn(konyRef: +kony.sdk, serviceName: ?)",
+                "prototype": {
+                    "getLogicServiceUrl": "fn()",
+                    "invokeOperation": "fn(serviceName: ?, path: ?, methodType: ?, headers: ?, data: ?, successCallback: ?, failureCallback: ?, options: ?)",
+                    "invokeOperationSync": {
+                        "!doc": "This is an internal api to invoke an service synchronously",
+                        "!type": "fn(serviceName: ?, path: ?, headers: ?, data: ?)"
+                    }
+                }
+            },
+            "ObjectServiceUtil": {
+                "cacheMetadata": "fn(serviceName: ?, objects: ?)",
+                "cacheObjectMetadata": "fn(serviceName: ?, object: ?)",
+                "getCachedMetadata": "fn(serviceName: ?)",
+                "getCachedObjectMetadata": "fn(serviceName: ?, objectName: ?)"
+            },
+            "OfflineObjectService": {
+                "!doc": "Method which returns the offline ObjectService object\n@param konyRef\n@param serviceName\n@constructor",
+                "!type": "fn(konyRef: +kony.sdk, serviceName: ?)",
+                "prototype": {
+                    "create": "fn(options: ?, successCallback: ?, failureCallback: ?)",
+                    "konyRef": "+kony.sdk"
+                }
+            },
+            "OfflineObjects": {
+                "!type": "fn(objServiceList: ?)",
+                "createHashMapFromJSONObject": "fn(json: ?, logPrefix: ?)",
+                "createJSONObjectFromHashMap": "fn(hashMap: ?, logPrefix: ?)",
+                "createKonySyncProgressCallback": "fn(progressLog: ?, progressCallback: ?) -> kony.sdk.OfflineObjects.createKonySyncProgressCallback.!ret",
+                "createSyncCallback": "fn(successLog: ?, successCallback: ?, failureLog: ?, failureCallback: ?) -> kony.sdk.OfflineObjects.createSyncCallback.!ret",
+                "drop": "fn(successCallback: ?, failureCallback: ?)",
+                "prototype": {
+                    "drop": "fn(successCallback: ?, failureCallback: ?)",
+                    "reset": "fn(successCallback: ?, failureCallback: ?)",
+                    "rollback": "fn(successCallback: ?, failureCallback: ?)",
+                    "setup": "fn(successCallback: ?, failureCallback: ?)"
+                },
+                "reset": "fn(objServiceList: ?, successCallback: ?, failureCallback: ?)",
+                "rollback": "fn(successCallback: ?, failureCallback: ?)",
+                "setReportingParams": "fn(reportingParams: ?)",
+                "setToken": "fn(token: ?)",
+                "setup": "fn(objServiceList: ?, successCallback: ?, failureCallback: ?)"
+            },
+            "OnlineObjectService": {
+                "!doc": "Method which returns the online ObjectService object\n@param konyRef\n@param serviceName\n@constructor",
+                "!type": "fn(konyRef: +kony.sdk, serviceName: ?)",
+                "prototype": {
+                    "create": {
+                        "!doc": "This method is used to create a record on the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "createBinaryContent": {
+                        "!doc": "Helps to create the binary content of the specified column on the Object\n@param {map} options - includes {\"dataObject\": {@link kony.sdk.dto.DataObject}, \"binaryAttrName\":columnName}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "customVerb": {
+                        "!doc": "This method is used to for performing custom operation\n@param {string} verbName -  custom verb identifier\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(verbName: string, options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "deleteRecord": {
+                        "!doc": "This method is used to delete a record on the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "fetch": {
+                        "!doc": "This method is used to fetch a record on the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getBinaryContent": {
+                        "!doc": "Helps to get the binary content of the specified column on the Object\n@param {map} options - includes {\"dataObject\":{@link kony.sdk.dto.DataObject}, \"binaryAttrName\":columnName}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getBinaryData": "fn(options: ?, arg1: ?, arg2: ?, arg3: ?, arg4: ?, arg5: ?)",
+                    "getBinaryUrl": "fn()",
+                    "getDataUrl": "fn()",
+                    "getMetadataOfAllObjects": {
+                        "!doc": "This method is used to retrive metadata of all objects\n@param {map} options - includes {\"getFromServer\":boolean,\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getMetadataOfObject": {
+                        "!doc": "This method is used to retrive metadata of a specific object\n@param objectName\n@param {map} options - includes {\"getFromServer\":boolean,\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(objectName: ?, options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "getMetadataUrl": "fn()",
+                    "getOperationsUrl": "fn()",
+                    "getVersion": "fn()",
+                    "partialUpdate": {
+                        "!doc": "This method is used to partial update a record on the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "update": {
+                        "!doc": "This method is used to update a record on the object\n@param {map} options - includes {\"dataObject\":(@link kony.sdk.dto.DataObject),\"headers\":<map of http headers>}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    },
+                    "updateBinaryContent": {
+                        "!doc": "Helps to update the binary content of the specified column on the Object\n@param {map} options - includes {\"dataObject\": {@link kony.sdk.dto.DataObject}, \"binaryAttrName\":columnName}\n@param successCallback\n@param failureCallback",
+                        "!type": "fn(options: ?, successCallback: ?, failureCallback: ?)"
+                    }
+                }
+            },
+            "SYNC_LOGGER_NAME": "string",
+            "SyncV2Classes": {
+                "!doc": "JS Bindings to SyncV2 native classes",
+                "import": "fn() -> kony.sdk.SyncV2Classes.import.!ret"
+            },
+            "claimsAndProviderTokenRefresh": "fn(callback: ?, failureCallback: ?)",
+            "claimsRefresh": "fn(callback: ?, failureCallback: ?)",
+            "claimsRefreshSync": "fn()",
+            "cloneObject": "fn(obj: ?) -> !0",
+            "constants": {
+                "Aggregation": {
+                    "AVG": "string",
+                    "COUNT": "string",
+                    "MAX": "string",
+                    "MIN": "string",
+                    "NONE": "string",
+                    "SUM": "string"
+                },
+                "DateTimeType": {
+                    "CURRENTMONTH": "string",
+                    "CURRENTWEEK": "string",
+                    "LASTMONTH": "string",
+                    "LASTWEEK": "string",
+                    "NEXTMONTH": "string",
+                    "NEXTWEEK": "string",
+                    "TODAY": "string",
+                    "TOMORROW": "string",
+                    "YESTERDAY": "string"
+                },
+                "HTTP_METHOD_GET": "string",
+                "HTTP_METHOD_POST": "string",
+                "JoinType": {
+                    "INNER": "string",
+                    "LEFT": "string",
+                    "RIGHT": "string"
+                },
+                "MatchType": {
+                    "CONTAINS": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "ENDSWITH": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "EQUALS": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "GREATER": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "GREATEREQUAL": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "ISNOTNULL": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "ISNULL": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "LESS": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "LESSEQUAL": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "LIKE": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "NOTEQUAL": {
+                        "name": "string",
+                        "value": "string"
+                    },
+                    "STARTSWITH": {
+                        "name": "string",
+                        "value": "string"
+                    }
+                },
+                "Operator": {
+                    "AND": "string",
+                    "OR": "string"
+                },
+                "OrderType": {
+                    "ASCENDING": "string",
+                    "DESCENDING": "string"
+                },
+                "binary": "string",
+                "extendedfield": "string",
+                "iterations": "number",
+                "keyLength": "number",
+                "picklist": "string",
+                "picklistmultiselect": "string",
+                "reference": "string",
+                "reportingType": {
+                    "custom": "string",
+                    "session": "string"
+                }
+            },
+            "deleteMetadatafromDs": "fn()",
+            "dto": {
+                "And": {
+                    "!doc": "This function is the And constructor.\n\n@param left\n@param right",
+                    "!type": "fn(left: ?, right: ?)",
+                    "prototype": {
+                        "initializeAnd": "fn(left: ?, right: ?)"
+                    }
+                },
+                "Between": {
+                    "!doc": "This function is used to check the range of values of columnObj\n@param columnObj {@link kony.sdk.dto.Column}\n@param colRange\n@constructor",
+                    "!type": "fn(columnObj: ?, colRange: ?)",
+                    "prototype": {
+                        "getColumn": "fn() -> !this.column",
+                        "getRange": "fn() -> !this.range",
+                        "quote": "fn(str: ?)",
+                        "setColumn": "fn(column: ?)",
+                        "setRange": "fn(range: ?)",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "Column": {
+                    "!doc": "This function is a Column constructor\n@param tableObj {@link kony.sdk.dto.Table}\n@param colName\n@constructor",
+                    "!type": "fn(tableObj: +kony.sdk.dto.Table, colName: ?)",
+                    "prototype": {
+                        "getAggregation": "fn() -> !this.aggregation",
+                        "getAlias": "fn() -> !this.alias",
+                        "getDataType": "fn() -> !this.dataType",
+                        "getName": "fn() -> !this.name",
+                        "getTable": "fn() -> !this.table",
+                        "isComputedField": "fn() -> !this.fieldComputed",
+                        "setAggregation": "fn(aggregation: ?)",
+                        "setAlias": "fn(alias: ?)",
+                        "setComputedField": "fn(fieldComputed: ?)",
+                        "setDataType": "fn(dataType: ?)",
+                        "setName": "fn(name: ?)",
+                        "setTable": "fn(table: ?)",
+                        "table": "+kony.sdk.dto.Table",
+                        "toString": "fn() -> string",
+                        "toStringByMode": "fn(mode: ?) -> string",
+                        "toStringByTablePrefix": "fn(includeTablePrefix: ?) -> string"
+                    }
+                },
+                "Criteria": {
+                    "!doc": "This is Interface to define where clauses\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "quote": "fn(str: ?)"
+                    }
+                },
+                "DataObject": {
+                    "!doc": "An object used to perform CRUD operations on objects\n@param objectName\n@param record\n@constructor",
+                    "!type": "fn(objectName: ?, record: ?)",
+                    "prototype": {
+                        "addChildDataObject": {
+                            "!doc": "This function is used to add a child Dataobject into the data object\n@param  childDataObject {@link kony.sdk.dto.DataObject}",
+                            "!type": "fn(childDataObject: ?)"
+                        },
+                        "addField": {
+                            "!doc": "This function is used to add fields and their values to the dataobject\n@param fieldName\n@param value",
+                            "!type": "fn(fieldName: ?, value: ?)"
+                        },
+                        "getObjectName": {
+                            "!doc": "This function is used to get the object name\n@returns objectName {string}",
+                            "!type": "fn() -> !this.objectName"
+                        },
+                        "getOdataUrl": {
+                            "!doc": "This function is used to get the odata url to query\n@returns {null}",
+                            "!type": "fn() -> !this.odataUrl"
+                        },
+                        "getRecord": {
+                            "!doc": "This function is used to get the map of records present in the DataObject\n@returns {JSON} record",
+                            "!type": "fn() -> !this.record"
+                        },
+                        "getSelectQueryObject": {
+                            "!doc": "This function is used to get a SelectQueryObject {@link kony.sdk.dto.SelectQuery}\n@returns selectQueryObject {@link kony.sdk.dto.SelectQuery}",
+                            "!type": "fn() -> !this.selectQueryObject"
+                        },
+                        "record": {},
+                        "setOdataUrl": {
+                            "!doc": "This function is used to set the odata url to query\n@param odataUrl",
+                            "!type": "fn(odataUrl: ?)"
+                        },
+                        "setRecord": {
+                            "!doc": "This function is used to set a map of records to the dataobject\n@param fieldValuesMap",
+                            "!type": "fn(fieldValuesMap: ?)"
+                        },
+                        "setSelectQueryObject": {
+                            "!doc": "This function is used to set a SelectQueryObject {@link kony.sdk.dto.SelectQuery}\n@param selectQueryObject {@link kony.sdk.dto.SelectQuery}",
+                            "!type": "fn(selectQueryObject: ?)"
+                        }
+                    }
+                },
+                "DateRange": {
+                    "!doc": "This function is the DateRange constructor.\n@param startDate\n@param endDate",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getEnd": "fn() -> !this.end",
+                        "getStart": "fn() -> !this.start",
+                        "setEnd": {
+                            "!doc": "This function is used to set End value.\n\n@param end",
+                            "!type": "fn(end: ?)"
+                        },
+                        "setStart": {
+                            "!doc": "This function is used to set start value.\n\n@param start",
+                            "!type": "fn(start: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "DecimalRange": {
+                    "!doc": "This function is the DecimalRange constructor.\n@param startDecimal\n@param endDecimal",
+                    "!type": "fn(startDecimal: ?, endDecimal: ?)",
+                    "prototype": {
+                        "getEnd": "fn() -> !this.end",
+                        "getStart": "fn() -> !this.start",
+                        "setEnd": {
+                            "!doc": "This function is used to set End value.\n\n@param end",
+                            "!type": "fn(end: ?)"
+                        },
+                        "setStart": {
+                            "!doc": "This function is used to set start value.\n\n@param start",
+                            "!type": "fn(start: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Exists": {
+                    "!doc": "This function is used to in set Exists param in select query\n@param subSelectQuery {@link kony.sdk.dto.SelectQuery}\n@constructor",
+                    "!type": "fn(subSelectQuery: ?)",
+                    "prototype": {
+                        "getSubSelect": "fn() -> !this.subSelect",
+                        "setSubSelect": "fn(subSelect: ?)",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "Expression": {
+                    "!doc": "This function is a constructor for Expression Object\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getExpression": "fn() -> !this.expression",
+                        "getOperator": "fn() -> !this.operator",
+                        "getTerm": "fn() -> !this.term",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "FieldMetadata": {
+                    "!doc": "The structure of Field Metadata obtained from server\n@constructor",
+                    "!type": "fn()"
+                },
+                "FloatRange": {
+                    "!doc": "This function is the FloatRange constructor.\n@param startFloat\n@param endFloat",
+                    "!type": "fn(startFloat: ?, endFloat: ?)",
+                    "prototype": {
+                        "getEnd": "fn() -> !this.end",
+                        "getStart": "fn() -> !this.start",
+                        "setEnd": {
+                            "!doc": "This function is used to set End value.\n\n@param end",
+                            "!type": "fn(end: ?)"
+                        },
+                        "setStart": {
+                            "!doc": "This function is used to set start value.\n\n@param start",
+                            "!type": "fn(start: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Group": {
+                    "!doc": "This Object represents a groupby clause in select query\n@param columnObj {@link kony.sdk.dto.Column}\n@constructor",
+                    "!type": "fn(columnObj: ?)",
+                    "prototype": {
+                        "getColumn": "fn() -> !this.column",
+                        "setColumn": "fn(column: ?)",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "InCriteria": {
+                    "!doc": "This function is a constructor for InCriteria Object\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getColumn": "fn() -> !this.column",
+                        "getColumnForTable": "fn(table: ?, columnName: ?) -> +kony.sdk.dto.Column",
+                        "getValues": "fn() -> !this.values",
+                        "setColumn": "fn(column: ?)",
+                        "setValues": "fn(valuesCollection: ?)",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "IntegerRange": {
+                    "!doc": "This function is the IntegerRange constructor.\n@param startInt\n@param endInt",
+                    "!type": "fn(startInt: ?, endInt: ?)",
+                    "prototype": {
+                        "getEnd": "fn() -> !this.end",
+                        "getStart": "fn() -> !this.start",
+                        "setEnd": {
+                            "!doc": "This function is used to set End value.\n\n@param end",
+                            "!type": "fn(end: ?)"
+                        },
+                        "setStart": {
+                            "!doc": "This function is used to set start value.\n\n@param start",
+                            "!type": "fn(start: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Join": {
+                    "!doc": "This Object represents JOINS used in kony.sdk.dto.SelectQuery\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getCriteria": "fn() -> !this.criteria",
+                        "getJoinType": "fn() -> !this.joinType",
+                        "getTable": "fn() -> !this.table",
+                        "initCriteria": "fn(srcColumn: ?, destColumn: ?)",
+                        "setCriteria": "fn(criteria: ?)",
+                        "setJoinType": "fn(joinType: ?)",
+                        "setTable": "fn(table: ?)",
+                        "toString": "fn() -> string"
+                    }
+                },
+                "LogicGroup": {
+                    "!doc": "This function helps in preparing And {@link kony.sdk.dto.And} and Or {@Link kony.sdk.dto.Or} clauses\n@param operatorLg\n@param leftOp\n@param rightOp\n@constructor",
+                    "!type": "fn(operatorLg: ?, leftOp: ?, rightOp: ?)",
+                    "prototype": {
+                        "getLeft": "fn() -> !this.left",
+                        "getOperator": "fn() -> !this.operator",
+                        "getRight": "fn() -> !this.right",
+                        "initializeLogicGroup": {
+                            "!doc": "This function is used to initialize LogicGroup.\n\n@param operator\n@param left\n@param right",
+                            "!type": "fn(operator: ?, left: ?, right: ?)"
+                        },
+                        "setLeft": {
+                            "!doc": "This function is used to set left.\n\n@param val",
+                            "!type": "fn(val: ?)"
+                        },
+                        "setOperator": {
+                            "!doc": "This function is used to set Operator.\n\n@param val",
+                            "!type": "fn(val: ?)"
+                        },
+                        "setRight": {
+                            "!doc": "This function is used to set Right.\n\n@param val",
+                            "!type": "fn(val: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Match": {
+                    "!doc": "This function is used to define where clause\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getColumn": "fn() -> !this.column",
+                        "getMatchType": "fn() -> !this.matchType",
+                        "getValue": "fn() -> !this.value",
+                        "setMatchType": {
+                            "!doc": "This function is used to set match type.\n\n@param matchType",
+                            "!type": "fn(matchType: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Not": {
+                    "!doc": "This function is the Not constructor.\n\n@param right",
+                    "!type": "fn(right: ?)",
+                    "prototype": {
+                        "initializeNot": "fn(right: ?)"
+                    }
+                },
+                "ObjectMetadata": {
+                    "!doc": "The structure of Object Metadata obtained from server\n@constructor",
+                    "!type": "fn()"
+                },
+                "ObjectRelationship": {
+                    "!doc": "The structure of Object Relationship in metadata obtained from server\n@constructor",
+                    "!type": "fn()"
+                },
+                "Or": {
+                    "!doc": "This function is the Or constructor.\n\n@param left\n@param right",
+                    "!type": "fn(left: ?, right: ?)",
+                    "prototype": {
+                        "initializeOr": "fn(left: ?, right: ?)"
+                    }
+                },
+                "Order": {
+                    "!doc": "This function is the Order constructor.\n@param columnObj\n@param orderTypeObj",
+                    "!type": "fn(columnObj: ?, orderTypeObj: ?)",
+                    "prototype": {
+                        "getColumn": "fn() -> !this.column",
+                        "getType": "fn() -> !this.type",
+                        "setColumn": {
+                            "!doc": "This function is used to set column.\n\n@param column",
+                            "!type": "fn(column: ?)"
+                        },
+                        "setType": {
+                            "!doc": "This function is used to set type.\n\n@param type",
+                            "!type": "fn(type: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "PickList": {
+                    "!doc": "This Object represent picklist values\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "getDefaultValue": "fn() -> !this.defaultValue",
+                        "getFieldMappingId": "fn() -> !this.fieldMappingId",
+                        "getId": "fn() -> !this.id",
+                        "getLabel": "fn() -> !this.label",
+                        "getValidFor": "fn() -> !this.validFor",
+                        "getValue": "fn() -> !this.value",
+                        "isActive": "fn() -> !this.active",
+                        "setActive": "fn(active: ?)",
+                        "setDefaultValue": "fn(defaultValue: ?)",
+                        "setFieldMappingId": "fn(fieldMappingId: ?)",
+                        "setId": "fn(id: ?)",
+                        "setLabel": "fn(label: ?)",
+                        "setValidFor": "fn(validFor: ?)",
+                        "setValue": "fn(value: ?)"
+                    }
+                },
+                "RecordObject": {
+                    "!doc": "This object is used to define a record object used in Offline CRUD\n@constructor",
+                    "!type": "fn()",
+                    "prototype": {
+                        "childRecords": "[?]",
+                        "tableName": "string"
+                    }
+                },
+                "SelectQuery": {
+                    "!doc": "The Object used to define select query object, in order to fetch data\n@param serviceName\n@param tableObj {@link kony.sdk.dto.Table}\n@constructor",
+                    "!type": "fn(serviceName: ?, tableObj: ?)",
+                    "prototype": {
+                        "addColumn": {
+                            "!doc": "This function is used to add a column object into the select query\n@param columnObj {@Link kony.sdk.dto.Column}\n@returns {Array}",
+                            "!type": "fn(columnObj: ?) -> !this.columnList"
+                        },
+                        "addCriteria": {
+                            "!doc": "This function is used to add a criteria object to the select query\n@param criteriaObj\n@returns {Array}",
+                            "!type": "fn(criteriaObj: ?) -> !this.criteriaList"
+                        },
+                        "addGroup": {
+                            "!doc": "This function is used to add a group object to select query\n@param groupObj",
+                            "!type": "fn(groupObj: ?)"
+                        },
+                        "addJoin": {
+                            "!doc": "This function is used to add a join object\n@param joinObj",
+                            "!type": "fn(joinObj: ?)"
+                        },
+                        "addOrder": {
+                            "!doc": "This function is used to add order object to a select query\n@param orderObj",
+                            "!type": "fn(orderObj: ?)"
+                        },
+                        "appendListToQuery": "fn(objectList: ?, seperator: ?, mode: ?) -> string",
+                        "columnList": "[?]",
+                        "criteriaList": "[?]",
+                        "getColumns": {
+                            "!doc": "This function is used to return columns in select query\n@returns {Array} Columns",
+                            "!type": "fn() -> !this.columnList"
+                        },
+                        "getCriterias": {
+                            "!doc": "This function is used to get criteria objects in the select query\n@returns {Array} Criterias",
+                            "!type": "fn() -> !this.criteriaList"
+                        },
+                        "getDistinct": {
+                            "!doc": "This function is used to get isDistinct flag\n@returns {boolean}",
+                            "!type": "fn() -> !this.isDistinct"
+                        },
+                        "getGroups": {
+                            "!doc": "This function is used to get the group objects in the select query\n@returns {Array} GroupObjs",
+                            "!type": "fn() -> !this.groupList"
+                        },
+                        "getJoins": {
+                            "!doc": "This function is used to get the Join objects in the select query\n@returns {Array} Joins",
+                            "!type": "fn() -> !this.joinList"
+                        },
+                        "getLimit": {
+                            "!doc": "This function is used to get the Limit Value\n@returns {integer} limit",
+                            "!type": "fn() -> !this.limit"
+                        },
+                        "getOrders": {
+                            "!doc": "This function is used to get the Order Objects in the select query\n@returns {Array} OrderObjs",
+                            "!type": "fn() -> !this.orderList"
+                        },
+                        "getSkip": {
+                            "!doc": "This function is used to get the Skip Value\n@returns {integer} skip",
+                            "!type": "fn() -> !this.skip"
+                        },
+                        "getTables": {
+                            "!doc": "This function is used to return tables in select query\n@returns {Array} Tables",
+                            "!type": "fn() -> !this.tables"
+                        },
+                        "groupList": "[?]",
+                        "isDistinct": "bool",
+                        "joinList": "[?]",
+                        "orderList": "[?]",
+                        "removeColumn": {
+                            "!doc": "This function is used to remove columnobject set in select query\n@param columnObj {@link kony.sdk.dto.Column}",
+                            "!type": "fn(columnObj: ?)"
+                        },
+                        "removeCriteria": {
+                            "!doc": "This function is used to remove criteriaObject from select query\n@param criteriaObj",
+                            "!type": "fn(criteriaObj: ?)"
+                        },
+                        "removeGroup": {
+                            "!doc": "This function is used to remove group set from select query\n@param groupObj",
+                            "!type": "fn(groupObj: ?)"
+                        },
+                        "removeJoin": {
+                            "!doc": "This function is used to remove Join set in select query\n@param joinObj",
+                            "!type": "fn(joinObj: ?)"
+                        },
+                        "removeOrder": {
+                            "!doc": "This function is used to remove OrderObj set in SelectQuery\n@param orderObj",
+                            "!type": "fn(orderObj: ?)"
+                        },
+                        "setDistinct": {
+                            "!doc": "This function is used to set isDistinct\n@param isDistinct",
+                            "!type": "fn(isDistinct: ?)"
+                        },
+                        "setLimit": {
+                            "!doc": "This function is used to set Limit value\n@param val",
+                            "!type": "fn(val: ?)"
+                        },
+                        "setSkip": {
+                            "!doc": "This function is used to set Skip value\n@param val",
+                            "!type": "fn(val: ?)"
+                        },
+                        "tables": "[?]",
+                        "toString": {
+                            "!doc": "This function is used to get the select query in the form of a string\n@returns {string}",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "StringRange": {
+                    "!doc": "This function is the StringRange constructor.\n@param startString\n@param endString",
+                    "!type": "fn(startString: ?, endString: ?)",
+                    "prototype": {
+                        "getEnd": "fn() -> !this.end",
+                        "getStart": "fn() -> !this.start",
+                        "setEnd": {
+                            "!doc": "This function is used to set End value.\n\n@param end",
+                            "!type": "fn(end: ?)"
+                        },
+                        "setStart": {
+                            "!doc": "This function is used to set start value.\n\n@param start",
+                            "!type": "fn(start: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                },
+                "Table": {
+                    "!doc": "This function is the Table constructor.\n@param tableName\n@param tableAlias\n@param junctionType\n@constructor",
+                    "!type": "fn(tableName: ?, tableAlias: ?, junctionType: ?)",
+                    "prototype": {
+                        "equals": {
+                            "!doc": "This function is used to check object equality.\n\n@param obj\n@return Boolean",
+                            "!type": "fn(obj: ?) -> bool"
+                        },
+                        "getAlias": "fn() -> !this.alias",
+                        "getColumn": "fn(columnName: ?) -> +kony.sdk.dto.Column",
+                        "getName": "fn() -> !this.name",
+                        "hasAlias": {
+                            "!doc": "This function is used to check if alias is present or not.\n\n@return Boolean",
+                            "!type": "fn() -> bool"
+                        },
+                        "isJunction": {
+                            "!doc": "This function is used to return if the table is a junction table.\n\n@return boolean",
+                            "!type": "fn() -> !this.isjunction"
+                        },
+                        "setAlias": {
+                            "!doc": "This function is used to set alias.\n\n@param alias",
+                            "!type": "fn(alias: ?)"
+                        },
+                        "setJunction": {
+                            "!doc": "This function is used to set the type of table junction/non-junction table.\n\n@param junctionType",
+                            "!type": "fn(junctionType: ?)"
+                        },
+                        "setName": {
+                            "!doc": "This function is used to set name.\n\n@param name",
+                            "!type": "fn(name: ?)"
+                        },
+                        "toString": {
+                            "!doc": "This function is used to convert to String.\n\n@return string",
+                            "!type": "fn() -> string"
+                        }
+                    }
+                }
+            },
+            "error": {
+                "getAuthErrObj": "fn(errResponse: ?)",
+                "getClientErrObj": "fn(errCode: ?, errMsg: ?)",
+                "getIdentitySessionInactiveErrObj": "fn()",
+                "getIntegrationErrObj": "fn(errResponse: ?)",
+                "getLogicErrObj": "fn(errResponse: ?)",
+                "getMFcodeErrObj": "fn(mfcode: ?, message: ?, details: ?, errMessagePrefix: ?)",
+                "getMessagingError": "fn(errMsg: ?)",
+                "getNullClaimsTokenErrObj": "fn()",
+                "getNullRefreshTokenErrObj": "fn()",
+                "getObjectServiceErrObj": "fn(errResponse: ?)"
+            },
+            "errorcodes": {
+                "cliams_token_null": "number",
+                "clientvalidation_error_opstatus": "number",
+                "connectivity_error_code": "number",
+                "default_code": "number",
+                "identity_session_inactive": "number",
+                "invalid_app_credentials": "number",
+                "invalid_dataobject_instance": {
+                    "!doc": "Object Service Error Messages",
+                    "!type": "number"
+                },
+                "invalid_json_code": "number",
+                "invalid_object": "number",
+                "invalid_queryparams_instance": "number",
+                "invalid_session_or_token_expiry": "number",
+                "invalid_user_app_credentials": "number",
+                "invalid_user_app_services": "number",
+                "invalid_user_credentials": "number",
+                "messaging_service_fail": "number",
+                "norecords_to_delete": "number",
+                "null_or_undefined": "number",
+                "offline_auth_failed": "number",
+                "primarykey_unavailable": "number",
+                "request_timed_out_code": "number",
+                "servicedoc_unavailable": "number",
+                "transaction_failed": "number",
+                "transient_login_fail": "number",
+                "unknown_error_code": "number"
+            },
+            "errormessages": {
+                "cliams_token_null": "string",
+                "connectivity_error_message": "string",
+                "default_message": "string",
+                "identity_session_inactive": "string",
+                "invalid_app_credentials": "string",
+                "invalid_dataobject_instance": "string",
+                "invalid_json_message": "string",
+                "invalid_object": "string",
+                "invalid_queryparams_instance": "string",
+                "invalid_session_or_token_expiry": "string",
+                "invalid_user_app_credentials": "string",
+                "invalid_user_app_services": "string",
+                "invalid_user_credentials": "string",
+                "messaging_service_fail": "string",
+                "norecords_to_delete": "string",
+                "null_or_undefined": "string",
+                "offline_auth_failed": "string",
+                "primarykey_unavailable": "string",
+                "request_timed_out_message": "string",
+                "servicedoc_unavailable": "string",
+                "transaction_failed": "string",
+                "transient_login_fail": "string",
+                "unknown_error_message": "string"
+            },
+            "fetchClaimsTokenFromServer": "fn(isBackendTokenRefreshRequired: ?, callback: ?, failureCallback: ?)",
+            "formatCurrentDate": "fn(inputDateString: ?) -> string",
+            "formatDateComponent": "fn(dateComponent: string) -> !0",
+            "formatSuccessResponse": "fn(data: ?) -> !0",
+            "getAType": {
+                "!doc": "Helps to get the atype for Spa and DesktopWeb applications it would be \"spa\" for remaining it would be \"native\"",
+                "!type": "fn() -> string"
+            },
+            "getChannelType": "fn() -> string",
+            "getCurrentInstance": {
+                "!doc": "This is to be deprecated with getDefaultInstance",
+                "!type": "fn()"
+            },
+            "getDefaultInstance": "fn()",
+            "getDeviceId": "fn() -> string",
+            "getFormData": {
+                "!doc": "Helps to prepare the input wrapped into kony.net.FormData",
+                "!type": "fn(payload: ?)"
+            },
+            "getPayload": "fn(konyRef: ?) -> kony.sdk.getPayload.!ret",
+            "getPlatformName": "fn() -> string",
+            "getReportingParamsForOfflineObjects": "fn()",
+            "getSdkType": "fn() -> string",
+            "getXdomainLibPath": "fn()",
+            "getXdomainSlaves": "fn() -> ?",
+            "globalRequestParamType": {
+                "bodyParams": "string",
+                "headers": "string",
+                "queryParams": "string"
+            },
+            "initiateSession": {
+                "!doc": "stub method",
+                "!type": "fn()"
+            },
+            "invokeMbaasServiceFromKonyStudio": "fn(url: ?, inputParam: ?, serviceID: ?, operationID: ?, callBack: ?, infoObject: ?)",
+            "invokeMbaasServiceFromKonyStudioAsync": "fn(url: ?, inputParam: ?, serviceID: ?, operationID: ?, callBack: ?, info: ?)",
+            "invokeMbaasServiceFromKonyStudioSync": "fn(url: ?, inputParam: ?, serviceID: ?, operationID: ?)",
+            "isArray": "fn(data: ?) -> bool",
+            "isDebugEnabled": "bool",
+            "isEmptyObject": "fn(obj: ?) -> bool",
+            "isInitialized": "bool",
+            "isJson": "fn(str: ?) -> bool",
+            "isLicenseUrlAvailable": "bool",
+            "isNetworkAvailable": {
+                "!doc": "Utility Method for the application to check the network availability.",
+                "!type": "fn() -> bool"
+            },
+            "isNullOrUndefined": "fn(val: ?) -> bool",
+            "isSSOLoginSuccess": "bool",
+            "isSessionOrTokenExpired": {
+                "!doc": "private method to identify whether session/token expired or not based on error code",
+                "!type": "fn(mfcode: ?) -> bool"
+            },
+            "isValidDeeplinkCallback": {
+                "!doc": "Validates the deeplink params. A valid deeplink redirection will contain params \"code\" & \"launchmode\" is 3.\n@param {map} params  - query parameters from the deeplink redirection",
+                "!type": "fn(params: ?) -> bool"
+            },
+            "logger": "+konyLogger",
+            "logsdk": "+konySdkLogger",
+            "metric": {
+                "characterLengthLimit": "number",
+                "clearBufferEvents": {
+                    "!doc": "Clearing events sent to server",
+                    "!type": "fn()"
+                },
+                "clearEventFlowTag": "fn()",
+                "errorCodeMap": {
+                    "<i>": "bool"
+                },
+                "eventBufferAutoFlushValue": "number",
+                "eventBufferCount": "number",
+                "eventBufferMaxValue": "number",
+                "eventConfig": {
+                    "confType": "string",
+                    "eventBufferAutoFlushCount": "number",
+                    "eventBufferMaxCount": "number"
+                },
+                "eventFlowTag": "string",
+                "eventTypeMap": {
+                    "custom": "string",
+                    "formentry": "string",
+                    "gesture": "string",
+                    "orientation": "string",
+                    "servicecall": "string",
+                    "touch": "string"
+                },
+                "flushEvents": "fn()",
+                "getEventFlowTag": "fn() -> string",
+                "getEventsInBuffer": "fn() -> [?]",
+                "pushEventsToBufferArray": {
+                    "!doc": "Pushes events received from user to BufferBackupArray which will be flushed to server",
+                    "!type": "fn()"
+                },
+                "readFromDS": {
+                    "!doc": "Reading any pending events from Data Store",
+                    "!type": "fn()"
+                },
+                "reportEvent": "fn(evttype: ?, evtSubType: ?, formID: ?, widgetID: ?, flowTag: ?)",
+                "reportEventBufferArray": "[?]",
+                "reportEventBufferBackupArray": "[?]",
+                "retrievedDS": "bool",
+                "saveInDS": {
+                    "!doc": "Stores event data in Data Store on failure of service Call",
+                    "!type": "fn()"
+                },
+                "setEventConfig": "fn(confType: ?, eventBufferAutoFlushCount: ?, eventBufferMaxCount: ?)",
+                "setEventFlowTag": "fn(flowTag: ?)"
+            },
+            "offline": {
+                "!doc": "Method to create the Identity service instance with the provided provider name.\n@param {string} providerName - Name of the provider\n@returns {IdentityService} Identity service instance",
+                "getClaimsToken": {
+                    "!doc": "This Utility API is to enable the developer read the claims token when the device is in offline mode.",
+                    "!type": "fn()"
+                },
+                "getKey": {
+                    "!doc": "This API generates the PBKDF2 key by reading the options passed as argument.",
+                    "!type": "fn(options: ?) -> string"
+                },
+                "getUserAuthInformation": {
+                    "!doc": "This API is to be used to retrieve the user login success response to the device and read it in the offline auth success scenario.",
+                    "!type": "fn(dbKey: ?)"
+                },
+                "isOfflineEnabled": {
+                    "!doc": "defined constants related to offline authentication.",
+                    "!type": "bool"
+                },
+                "loginOffline": {
+                    "!doc": "This Utility API to be used for the user to be able to login offline into the application.",
+                    "!type": "fn(successCallback: ?, errorCallback: ?)"
+                },
+                "persistToken": "bool",
+                "removePersistedUserAuthInformation": "fn()",
+                "removeUserAuthInformation": {
+                    "!doc": "Removes the user auth information from device store.",
+                    "!type": "fn()"
+                },
+                "removeUserCredentials": {
+                    "!doc": "This API removes the user credentials from the device store.",
+                    "!type": "fn()"
+                },
+                "saveTempUserCredentials": {
+                    "!doc": "This api saves the temporary user credentials to the device store.  This is to be called only if the app is offline auth enabled.",
+                    "!type": "fn(options: ?)"
+                },
+                "saveUserAuthInformation": {
+                    "!doc": "This API is to be used to store the user login success response to the device and read it in the offline auth success scenario.",
+                    "!type": "fn(dbKey: ?, authResponse: ?)"
+                },
+                "updateAuthToken": {
+                    "!doc": "This Utility API is to update the the claims token.",
+                    "!type": "fn(data: ?)"
+                },
+                "updatePersistedToken": {
+                    "!doc": "This Utility API is to update the the backend token.",
+                    "!type": "fn(data: ?)"
+                },
+                "updateSuccessUserCredentials": {
+                    "!doc": "This Util method reads the temporarily stored user credentials and updates the actual store of user credentials. This should be called on successful onlnine login.",
+                    "!type": "fn()"
+                }
+            },
+            "overrideNetworkFlag": {
+                "!doc": "Utility method to set the network flag for offline testing.",
+                "!type": "fn()"
+            },
+            "overrideUserId": "fn(userId: ?)",
+            "processClaimsErrorResponse": "fn(data: ?, konyRef: ?, isAsync: ?, callBack: ?)",
+            "processClaimsSuccessResponse": "fn(data: ?, konyRef: ?, isAsync: ?, callBack: ?)",
+            "processLogicErrorResponse": "fn(err: ?, isAsync: ?, callBack: ?)",
+            "prototype": {
+                "appendGlobalBodyParams": "fn(params: ?)",
+                "appendGlobalHeaders": "fn(headers: ?)",
+                "appendGlobalParams": "fn(url: ?, headers: ?, params: ?)",
+                "appendGlobalQueryParams": "fn(url: ?) -> !0",
+                "disableDebug": "fn()",
+                "enableDebug": "fn()",
+                "getClientParams": "fn()",
+                "getDataStore": "fn() -> +konyDataStore",
+                "getGlobalRequestParams": "fn(paramType: ?) -> !this.globalRequestParams",
+                "getIdentityService": "fn(providerName: ?) -> +IdentityService",
+                "getIntegrationService": {
+                    "!doc": "Method to create the integration service instance with the provided service name.\n@param {string} serviceName - Name of the service\n@returns {IntegrationService} Integration service instance",
+                    "!type": "fn(serviceName: string) -> +IntegrationService"
+                },
+                "getLogicService": "fn(serviceName: ?) -> +kony.sdk.LogicService",
+                "getMessagingService": {
+                    "!doc": "Method to create the messaging service instance.\n@returns {MessagingService} Messaging service instance",
+                    "!type": "fn() -> +MessagingService"
+                },
+                "getMetricsService": {
+                    "!doc": "Method to create the Metrics service instance with the provided service name.\n@returns {MetricsService} Metrics service instance",
+                    "!type": "fn() -> !this.metricsServiceObject"
+                },
+                "getObjectService": "fn(serviceName: ?, options: ?) -> ?",
+                "getReportingService": {
+                    "!doc": "Method to create the Reporting service instance with the provided service name.\n@returns {ReportingService} Reporting service instance",
+                    "!type": "fn() -> +ReportingService"
+                },
+                "getSessionId": "fn()",
+                "getSyncService": {
+                    "!doc": "Method to create the sync service instance.\n@returns {SyncService} sync service instance",
+                    "!type": "fn() -> +konySdkSyncService"
+                },
+                "getUserId": "fn()",
+                "globalRequestParamType": {
+                    "bodyParams": "string",
+                    "headers": "string",
+                    "queryParams": "string"
+                },
+                "globalRequestParams": {},
+                "init": "fn(appKey: ?, appSecret: ?, serviceUrl: ?, successCallback: ?, failureCallback: ?)",
+                "initWithServiceDoc": "fn(appKey: ?, appSecret: ?, serviceDoc: ?)",
+                "overrideUserIdFlag": "bool",
+                "registerObjectService": "fn(objectServiceType: ?, objectServiceClass: ?)",
+                "removeGlobalRequestParam": "fn(paramName: ?, paramType: ?)",
+                "resetGlobalRequestParams": "fn()",
+                "sessionChangeHandler": "fn(changes: ?)",
+                "setAuthServiceEndpoint": "fn(providerName: ?, endPoint: ?)",
+                "setClientParams": "fn(clientParamsMap: ?)",
+                "setCurrentUserId": "fn(newUserID: ?)",
+                "setDataStore": "fn(dataStore: ?)",
+                "setGlobalRequestParam": "fn(paramName: ?, paramValue: ?, paramType: ?)",
+                "setIntegrationServiceEndpoint": "fn(serviceName: ?, endPoint: ?)",
+                "setMessagingServiceEndPoint": "fn(endPoint: ?)",
+                "setObjectServiceEndpoint": "fn(serviceName: ?, endPoint: ?)",
+                "setReportingServiceEndPoint": "fn(serviceType: ?, endPoint: ?)",
+                "setSessionId": "fn(newSessionId: ?)",
+                "setSyncServiceEndpoint": "fn(endPoint: ?)"
+            },
+            "resetCurrentKeys": {
+                "!doc": "private method to clear cache",
+                "!type": "fn(konyRef: ?, _providerName: ?)"
+            },
+            "resetNetworkFlag": {
+                "!doc": "Utility method to reset the network flag set for offline testing.",
+                "!type": "fn()"
+            },
+            "resetProviderKeys": {
+                "!doc": "private method to clear cache",
+                "!type": "fn(konyRef: ?, _providerName: ?)"
+            },
+            "saveMetadatainDs": "fn(appKey: ?, appSecret: ?, servConfig: ?)",
+            "serviceDoc": {
+                "!type": "fn()",
+                "prototype": {
+                    "getAppId": "fn()",
+                    "getAppName": "fn()",
+                    "getAuthServiceByName": {
+                        "!doc": "what will this return? name?",
+                        "!type": "fn(authServiceProvider: ?)"
+                    },
+                    "getAuthServices": "fn()",
+                    "getBaseId": "fn()",
+                    "getIntegrationServiceByName": "fn(integrationServiceProviderName: ?)",
+                    "getIntegrationServices": "fn()",
+                    "getLogicServices": "fn()",
+                    "getMessagingServiceByName": "fn(messagingServiceProviderName: ?)",
+                    "getMessagingServices": "fn()",
+                    "getObjectServiceByName": "fn(objectServiceProviderName: ?)",
+                    "getObjectServices": "fn()",
+                    "getReportingServiceByType": "fn(reportingServiceProviderType: ?)",
+                    "getReportingServices": "fn()",
+                    "getSelfLink": "fn()",
+                    "getServicesMeta": "fn()",
+                    "getSyncServices": "fn()",
+                    "setAppId": "fn(appIdStr: ?)",
+                    "setAppName": "fn(appName: ?)",
+                    "setAuthService": "fn(loginProvider: ?)",
+                    "setBaseId": "fn(baseIdStr: ?)",
+                    "setIntegrationService": "fn(providerName: ?, endPointUrl: ?)",
+                    "setMessagingService": "fn(appId: ?, url: ?)",
+                    "setObjectService": "fn(providerName: ?, endPointUrl: ?)",
+                    "setReportingService": "fn(reportingType: ?, url: ?)",
+                    "setSelfLink": "fn(selfLinkStr: ?)",
+                    "setSyncService": "fn(syncServiceProvider: ?)",
+                    "toJSON": "fn() -> kony.sdk.util.populateIndividualServiceLists.!1"
+                }
+            },
+            "setLicenseCall": "fn(appKey: ?, appSecret: ?, data: ?)",
+            "setLogLevelFromServerResponse": "fn(responseHeaders: ?)",
+            "setXdomainLibPath": "fn(path: ?)",
+            "setXdomainSlaves": "fn(slaveEndPointMap: ?)",
+            "updateFormData": {
+                "!doc": "Helps to update prepare the input wrapped into kony.net.FormData",
+                "!type": "fn(formData: ?, key: ?, value: ?) -> !0"
+            },
+            "util": {
+                "decrpytSSOToken": "fn(encryptedtoken: ?) -> !0",
+                "deleteSSOToken": "fn()",
+                "encryptSSOToken": "fn(ssotoken: ?)",
+                "getDateRange": "fn(dateType: ?) -> [?]",
+                "getExtendedFieldsFromArray": {
+                    "!doc": "This function is responsible for checking if the array contains the object based on object's name property.\nreturns the array element if the object matches",
+                    "!type": "fn(array: ?, object: ?)"
+                },
+                "getMetadataOfColumn": {
+                    "!doc": "Helps to provide the Metadata of column in a Object",
+                    "!type": "fn(objMetadata: ?, colName: ?)"
+                },
+                "getPackagedMetadata": "fn()",
+                "getPkTableForBinary": {
+                    "!doc": "Helps to prepare the primary condition to get binary data",
+                    "!type": "fn(objMetadata: ?, columnValues: ?, failureCallback: ?) -> ?"
+                },
+                "getPrimarykeysFromMetadata": "fn(objMetadata: ?) -> ?",
+                "getRelationOfEntity": {
+                    "!doc": "Helps in getting the relationship data of an entity from a given relationship list",
+                    "!type": "fn(relationshipList: ?, entityName: ?) -> !0.<i>"
+                },
+                "getSSOToken": "fn()",
+                "getSyncDbName": "fn()",
+                "isNull": "fn(val: ?)",
+                "isPrimaryKey": {
+                    "!doc": "Helps in finding if a given column name is a primary key",
+                    "!type": "fn(primaryKeyList: ?, columnValue: ?) -> bool"
+                },
+                "isValidNumberType": "fn(val: ?)",
+                "matchIgnoreCase": {
+                    "!doc": "This is a utility function used to check whether the two strings provided\nwould match with each other.\n@param string1\n@param string2\n@return boolean",
+                    "!type": "fn(string1: ?, string2: string)"
+                },
+                "objectToQueryParams": "fn(valueObject: ?) -> string",
+                "populateColumnValues": {
+                    "!doc": "Helps in generating kony.sdk.dto.RecordObject from a given complex record",
+                    "!type": "fn(record: ?, childRecords: ?) -> ?"
+                },
+                "populateIndividualServiceLists": "fn(serviceConfig: +kony.sdk.serviceDoc, objectToPopulate: kony.sdk.util.populateIndividualServiceLists.!1)",
+                "replaceAll": {
+                    "!doc": "This is a replaceAll utility function\n@param string\n@param toReplace\n@param replaceWith\n@return String temp",
+                    "!type": "fn(string: ?, toReplace: ?, replaceWith: ?) -> string"
+                },
+                "saveSSOToken": "fn(SSOToken: ?)",
+                "setPackagedMetadata": {
+                    "!doc": "User needs to call this API to prepackage the metadata of the app. The data needs to be passed as json object or a stringified version of json object",
+                    "!type": "fn(metadataJson: ?)"
+                },
+                "toNumber": "fn(arg: ?)",
+                "validateCriteriaObject": "fn(criteria: ?)",
+                "validateDateTypeInput": "fn(dateType: ?)"
+            },
+            "verifyAndCallClosure": "fn(closure: ?, params: ?)",
+            "version": "string"
+        },
+        "setupsdks": "fn(initConfig: ?, successCallBack: ?, errorCallBack: ?)"
+    },
+    "konyDataStore": {
+        "!type": "fn()",
+        "prototype": {
+            "destroy": "fn()",
+            "getAllItems": "fn() -> ?",
+            "getItem": "fn(key: ?)",
+            "removeItem": "fn(key: ?)",
+            "setItem": {
+                "!doc": "kony.sdk.logsdk.trace(\"Setting konyDataStore\");",
+                "!type": "fn(key: ?, value: ?)"
+            }
+        }
+    },
+    "konyLogger": {
+        "!type": "fn()",
+        "prototype": {
+            "log": "fn(text: ?)"
+        }
+    },
+    "konyNetHttpRequest": "fn(url: ?, params: ?, headers: ?, httpMethod: ?, konyContentType: ?, successCallback: ?, failureCallback: ?, options: ?)",
+    "konyNetHttpRequestSync": "fn(url: ?, params: ?, headers: ?)",
+    "konyNetworkProvider": {
+        "!type": "fn()",
+        "prototype": {
+            "get": "fn(url: ?, params: ?, headers: ?, successCallback: ?, failureCallback: ?, konyContentType: ?, options: ?)",
+            "invokeDeleteRequest": "fn(url: ?, params: ?, headers: ?, successCallback: ?, failureCallback: ?, konyContentType: ?, options: ?)",
+            "post": "fn(url: ?, params: ?, headers: ?, successCallback: ?, failureCallback: ?, konyContentType: ?, options: ?)",
+            "postSync": {
+                "!doc": "postSync will only work for Richclients like Android,IOS",
+                "!type": "fn(url: ?, param: ?, headers: ?)"
+            },
+            "put": "fn(url: ?, params: ?, headers: ?, successCallback: ?, failureCallback: ?, konyContentType: ?, options: ?)"
+        }
+    },
+    "konySdkLogger": {
+        "!type": "fn()",
+        "prototype": {
+            "INDIRECTIONLEVEL": "number",
+            "debug": "fn(msg: ?, params: ?)",
+            "error": "fn(msg: string, params: ?)",
+            "fatal": "fn(msg: ?, params: ?)",
+            "getInstance": "fn() -> ?|KonySDKLoggerObj",
+            "info": "fn(msg: string, params: ?)",
+            "loggerEngineInit": "fn()",
+            "trace": "fn(msg: string, params: ?)",
+            "warn": "fn(msg: string, params: ?)"
+        }
+    },
+    "konySdkSyncService": {
+        "!type": "fn(konyRef: +kony.sdk)",
+        "prototype": {
+            "cancelPendingChunkRequests": "fn(successCallback: ?, errorCallback: ?)",
+            "createDownloadTask": {
+                "!doc": "binary chunking apis",
+                "!type": "fn(tbname: ?, columnName: ?, pks: ?, config: ?, successCallback: ?, errorCallback: ?)"
+            },
+            "deleteBinaryObject": "fn(tableName: ?, binaryColumnName: ?, primaryKeyTable: ?, options: ?, successCallback: ?, errorCallback: ?)",
+            "executeSelectQuery": "fn(query: ?, successcallback: ?, errorcallback: ?)",
+            "getAllPendingUploadInstances": "fn(retrieveOnlyCount: ?, successcallback: ?, errorcallback: ?)",
+            "getBinary": "fn(tableName: ?, binaryColumnName: ?, primaryKeyTable: ?, config: ?, successCallback: ?, errorCallback: ?)",
+            "getBinaryBase64": "fn(tbname: ?, columnName: ?, pks: ?, config: ?, successCallback: ?, errorCallback: ?)",
+            "getBinaryDataFilePath": "fn(tbname: ?, columnName: ?, pks: ?, successCallback: ?, errorCallback: ?)",
+            "getBinaryFilepath": "fn(tbname: ?, columnName: ?, pks: ?, config: ?, successCallback: ?, errorCallback: ?)",
+            "getDeferredUpload": "fn(successCallback: ?, errorCallback: ?)",
+            "getFailedBinaryRecords": {
+                "!doc": "adding the binary apis",
+                "!type": "fn(isDownload: ?, tablename: ?, columnname: ?, successCallback: ?, errorCallback: ?)"
+            },
+            "getPendingAcknowledgement": "fn(successCallback: ?, errorCallback: ?)",
+            "getPendingUpload": "fn(successCallback: ?, errorCallback: ?)",
+            "getStatusForBinary": "fn(tbname: ?, columnName: ?, pks: ?, successCallback: ?, errorCallback: ?)",
+            "init": {
+                "!doc": "generic apis",
+                "!type": "fn(initSuccess: ?, initFailure: ?)"
+            },
+            "isUpgradeRequired": "fn(config: ?)",
+            "pauseDownload": "fn(downloadID: ?, successCallback: ?, errorCallback: ?)",
+            "performUpgrade": "fn(config: ?)",
+            "reset": "fn(resetSuccess: ?, resetFailure: ?)",
+            "resumeDownload": "fn(downloadID: ?, successCallback: ?, errorCallback: ?)",
+            "rollbackPendingLocalChanges": "fn(successCallback: ?, errorCallback: ?)",
+            "startDownload": "fn(downloadID: ?, successCallback: ?, errorCallback: ?)",
+            "startReconciliation": "fn(config: ?)",
+            "startSession": {
+                "!doc": "modified api",
+                "!type": "fn(config: ?)"
+            },
+            "stopSession": "fn(successCallback: ?)"
+        }
+    },
+    "konyXMLHttpRequest": "fn(url: ?, params: ?, headers: ?, httpMethod: ?, konyContentType: ?, successCallback: ?, errorCallback: ?, options: ?)",
+    "konyXMLHttpRequestWrapper": "fn(url: ?, params: ?, headers: ?, httpMethod: ?, konyContentType: ?, successCallback: ?, failureCallback: ?, options: ?)",
+    "localDataStore": "+konyDataStore",
+    "overrideNetworkFlag": {
+        "!doc": "Flag used to override the network availability api for automation testing.\n@type {boolean}",
+        "!type": "bool"
+    },
+    "stripTrailingCharacter": "fn(str: ?, character: ?) -> !0",
+    "xdomain_init": "fn(callback: ?)"
+}

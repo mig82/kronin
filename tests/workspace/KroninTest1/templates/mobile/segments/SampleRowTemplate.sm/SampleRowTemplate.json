@@ -1,0 +1,51 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizScrollFlexForm",
+    "DNDConfig": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s7483f595b7b4777a64537edba8b5d0b",
+    "_title_": null,
+    "addWidgetsdone": false,
+    "allboxes": [],
+    "canUpdateUI": true,
+    "children": [
+        "flxSampleRowTemplate"
+    ],
+    "containerId": true,
+    "containerweight": 100,
+    "displayorientation": 3,
+    "enabledforidletimeout": false,
+    "id": "SampleRowTemplate",
+    "info": null,
+    "initdone": false,
+    "inputaccessoryviewtype": 4,
+    "intransitionconfig": {
+        "formTransition": "None"
+    },
+    "isSampleTemplate": true,
+    "isvisible": true,
+    "kuid": "5b5ada69c50746feba6a40270fa09838",
+    "name": "kony.ui.Form2",
+    "needappmenu": true,
+    "outtransitionconfig": {
+        "formTransition": "None"
+    },
+    "paddinginpixel": false,
+    "retainscrollposition": false,
+    "titleBarSkin": "s1e83989032d483380543c4a1dc594f6",
+    "titlebar": true,
+    "type": 3,
+    "wType": "Form"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "kronin",
+  "version": "0.0.4",
+  "description": "A collection of useful extensions for the Kony SDK.",
+  "main": "bin/kronin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mig82/kony-sdk-extensions.git"
+  },
+  "keywords": [
+    "Kony",
+    "utilities",
+    "extensions"
+  ],
+  "author": "Miguelangel Fernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mig82/kony-sdk-extensions/issues"
+  },
+  "homepage": "https://github.com/mig82/kony-sdk-extensions#readme",
+  "devDependencies": {
+    "browserify": "^16.3.0",
+    "tinyify": "^2.5.1",
+    "watchify": "^3.11.1"
+  }
+}

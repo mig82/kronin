@@ -1,0 +1,17 @@
+# EsLint
+/.eslintrc.*
+
+# Jasmine
+/spec/*
+
+# Pics for documentation
+/pics/
+
+# JSDoc
+/out
+
+# Sources
+/src
+
+# Visualizer test projects
+/tests
