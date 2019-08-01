@@ -1,6 +1,6 @@
 ((definition) => {
 	kony.mvc.patch = definition;
-})((controller, bindComponents) => {
+})((controller) => {
 
 	if (!controller.constructor || controller.constructor.name !== "BaseController"){
 		throw new Error("Cannot use extension kony.mvc.patch on anything other than a form controller");
