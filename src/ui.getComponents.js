@@ -17,7 +17,7 @@ require("./ui.getDescendants.js");
 	kony.ui.getComponents = definition;
 })(function getComponents(containerWidget, includeParent){
 
-	return kony.ui.getDescendants(controller.view, false, (child) => {
+	return kony.ui.getDescendants(containerWidget, false, (child) => {
 		return child.name === "kony.ui.KComponent";
 	});
 });
