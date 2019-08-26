@@ -1,6 +1,6 @@
 {
   "name": "kronin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A collection of useful extensions for the Kony SDK.",
   "main": "bin/kronin.js",
   "scripts": {

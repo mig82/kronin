@@ -15,9 +15,10 @@ browserify -p tinyify src/main.js -o bin/kronin.js
 
 ## Develop
 
-To see Krōnin in action, open Visualizer and switch workspace to
-`tests/workspace`. Then open project **KroninTest1** and run the live preview.
+First run:
 
 ```
 watchify src/main.js -o tests/workspace/KroninTest1/modules/kronin.js
 ```
+
+Then, open Visualizer and switch workspace to `tests/workspace`, open project **KroninTest1** and run the live preview.
