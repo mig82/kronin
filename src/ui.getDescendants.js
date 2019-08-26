@@ -38,7 +38,7 @@
 
 	//Then add the children of each child already known.
 	for(var k = 0; k < descendants.length; k++){
-		descendants = getChildren(descendants[k], test);
+		descendants = descendants.concat(getChildren(descendants[k], test));
 	}
 	return descendants;
 });
