@@ -1,4 +1,4 @@
-# Krōnin (Beta)
+# Krōnin
 
 A collection of [Rōnin](https://en.wikipedia.org/wiki/R%C5%8Dnin) extensions to enhance the Kony SDK.
 
