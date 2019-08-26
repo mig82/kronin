@@ -15,7 +15,7 @@ require("./ui.getDescendants.js");
 */
 ((definition) => {
 	kony.ui.getComponents = definition;
-})(function getComponents(containerWidget, includeParent){
+})(function getComponents(containerWidget){
 
 	return kony.ui.getDescendants(containerWidget, false, (child) => {
 		return child.name === "kony.ui.KComponent";
