@@ -1,6 +1,19 @@
 # Krōnin (Beta)
 
-A collection of Rōnin extensions to enhance the Kony SDK.
+A collection of [Rōnin](https://en.wikipedia.org/wiki/R%C5%8Dnin) extensions to enhance the Kony SDK.
+
+### Install
+
+[Krōnin is published to the NPM Registry](https://www.npmjs.com/package/kronin) so you can just install it into your project using the NPM command line by stepping into the project's root directory and running:
+
+```bash
+npm install kronin --prefix modules
+```
+
+This will install Krōnin into `[project_root]/modules/node_modules/kronin`. Then in Visualizer click *Project/Refresh*. Visualizer will pick up the `node_modules` and `kronin` directories as [*application groups*](https://docs.kony.com/konylibrary/visualizer/visualizer_user_guide/Content/OrganizingAppElementsInGroups.htm).
+
+![node_modules and Krōnin as Vis app groups](./pics/kronin_app_group.png "node_modules and Krōnin as Vis app groups").
+
 
 ## kony.amplify
 
@@ -149,7 +162,7 @@ A convenience function equivalent to using `getDescendants` with a filter to sel
 ## Disclaimer
 
 Krōnin is meant as a community project. It is **Not** part of the Kony Platform
-and it's not supported by Kony Inc. in any way.
+and it's not supported by Kony Inc. in any way — Hence the *Rōnin* bit ;)
 
 ## Contribute
 
