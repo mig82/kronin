@@ -150,3 +150,7 @@ A convenience function equivalent to using `getDescendants` with a filter to sel
 
 Krōnin is meant as a community project. It is **Not** part of the Kony Platform
 and it's not supported by Kony Inc. in any way.
+
+## Contribute
+
+To figure out how to build Krōnin for development check out [CONTRIBUTE.md](./CONTRIBUTE.md).
