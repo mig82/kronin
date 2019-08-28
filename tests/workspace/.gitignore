@@ -1,2 +1,11 @@
-/.webapps
+/.backup
+/.cloud
+/.cordova
+/.exports
 /.fp
+/.imports
+/.intellisense
+/.nativebindings
+/.userlibs
+/.webapps
+/__appextensions__
