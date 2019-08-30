@@ -1,2 +1,0 @@
-# Ignore the workspace of the test project for this repository's Github stats.
-tests/workspace/.cordova/ linguist-detectable=false
