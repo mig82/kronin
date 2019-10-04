@@ -33,20 +33,21 @@
 
 	function _addToHistory(priorForm){
 
-		if(typeof priorForm === "undefined"){
-			return;
-		}
+		if(priorForm && priorForm.id){
+			var priorId = priorForm.id;
+			//If the latest is not already the prior one, then add it.
+			if(history.length === 0 || history[history.length - 1] !== priorId){
 
-		var priorId = priorForm.id;
-		//If the latest is not already the prior one, then add it.
-		if(history.length === 0 || history[history.length - 1] !== priorId){
-
-			//If there's no more roon in the history, remove the oldest after home.
-			if(history.length >= maxH){
-				history = history.slice(0,1).concat(history.slice(2));
+				//If there's no more roon in the history, remove the oldest after home.
+				if(history.length >= maxH){
+					history = history.slice(0,1).concat(history.slice(2));
+				}
+				history.push(priorId);
+				//kony.print(`********Added ${priorId} to history. length ${history.length}`);
 			}
-			history.push(priorId);
-			//kony.print(`********Added ${priorId} to history. length ${history.length}`);
+		}
+		else{
+			return;
 		}
 	}
 
@@ -76,8 +77,12 @@
 		try{
 			//TODO: Make compatible with non-MVC projects.
 			(new kony.mvc.Navigation(friendlyName)).navigate(context);
-			var priorForm = kony.application.getPreviousForm();
-			if(!isGoingBack)_addToHistory(priorForm);
+
+			//Must defer getting the previous form to avoid issues on iOS.
+			kony.timer.schedule("kronin-chronicler-" + Date.now(), ()=>{
+				var priorForm = kony.application.getPreviousForm();
+				if(!isGoingBack)_addToHistory(priorForm);
+			}, 0, false);
 		}
 		catch(e){
 			let message = "Can't navigate to form ";

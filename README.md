@@ -127,7 +127,7 @@ define(function(){
 });
 ```
 
-## kony.router
+## router
 
 A convenient way to do all the navigations from a centralised place, which also provides
 a history of the navigations, allowing you to go back in a logical way.

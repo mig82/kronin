@@ -4,7 +4,7 @@ require("./i18n.getLocalizedString2");
 require("./main");
 require("./mvc.genAccessors");
 require("./mvc.patch");
-require("./mvc.router");
+require("./router");
 require("./getOs");
 require("./ui.getDescendants");
 require("./ui.getComponents");
