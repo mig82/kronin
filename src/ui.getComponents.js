@@ -19,6 +19,6 @@ require("./ui.getDescendants.js");
 
 	return kony.ui.getDescendants(containerWidget, false, (child) => {
 		//return child.name === "kony.ui.KComponent";
-		return child.isMaster;
+		return child.isMaster || child.name === "kony.ui.KComponent";
 	});
 });
