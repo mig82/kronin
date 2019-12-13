@@ -1,5 +1,6 @@
-require("./q2k");
-
-if(typeof kony.q2k.theme === "undefined"){
-	kony.q2k.theme = {};
+if(typeof kony.animations === "undefined"){
+	/**
+	 * A namespace for convenience animations.
+	 * */
+	kony.animations = {};
 }

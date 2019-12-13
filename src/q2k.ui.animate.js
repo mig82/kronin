@@ -52,6 +52,7 @@ require("./q2k.ui");
 		try{
 			var animation = kony.ui.createAnimation(steps);
 			widget.animate(animation, config, {
+				/*eslint no-shadow: ["error", { "allow": ["widget"] }]*/
 				animationStart: (widget, animationHandle, elapsedTime) => {
 					notify({ widget, animationHandle, elapsedTime });
 				},

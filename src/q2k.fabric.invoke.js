@@ -1,7 +1,13 @@
 require("./q2k.fabric");
 
-function invoke(client, serviceName, operationName, headers, data, options){
+((definition) => {
+	/**
+	 * Invoke a Fabric integration service in a promisy way.
+	 * */
+	kony.q2k.fabric.invoke = definition;
+})((serviceName, operationName, headers, data, options) => {
 
+	var client = kony.sdk.getCurrentInstance();
 	return Q.Promise(function(resolve, reject/*, notify*/) {
 
 		function onSuccess(response){
@@ -31,4 +37,4 @@ function invoke(client, serviceName, operationName, headers, data, options){
 			}
 		}
 	});
-}
+});
