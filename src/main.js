@@ -20,3 +20,5 @@ require("./i18n.getCurrentLocale2");
 require("./i18n.getCurrencyAmount");
 require("./i18n.getFormattedAmount");
 require("./i18n.getThousandsSeparator");
+
+require("./animations.rotate");
