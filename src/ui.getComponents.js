@@ -18,6 +18,7 @@ require("./ui.getDescendants.js");
 })(function getComponents(containerWidget){
 
 	return kony.ui.getDescendants(containerWidget, false, (child) => {
-		return child.name === "kony.ui.KComponent";
+		//return child.name === "kony.ui.KComponent";
+		return child.isMaster;
 	});
 });
