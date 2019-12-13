@@ -23,6 +23,14 @@
 		}
 	}
 
+	/**
+	 * A pub/sub mechanism taken and adapted from the core module of the
+	 * AmplifyJS library.<br>
+	 * It allows for total decoupling of event publishers and event subscribers,
+	 * and it's particularly useful if events from a single component or module
+	 * need to be communicated to several others in the application.
+	 * Read more at https://amplifyjs.com/api/pubsub/
+	 * */
 	kony.amplify = {
 
 		allowDuplicates: function(allow){
