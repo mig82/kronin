@@ -1,6 +1,8 @@
 
 require("./aaa");
 
+require("./doNothing");
+
 require("./router");
 require("./mvc.wire");
 
@@ -20,6 +22,8 @@ require("./i18n.getThousandsSeparator");
 
 require("./animations");
 require("./animations.rotate");
+require("./animations.animate");
+require("./animations.reveal");
 
 //Define a global setTimeout function.
 require("./setTimeout");
