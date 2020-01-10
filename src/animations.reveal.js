@@ -10,7 +10,7 @@ require("./animations.animate");
 	 * @param {number} delay How long to wait before firing the animation, measured in seconds.
 	 * @param {number} timing A constant from kony.anim namespace, defining the acceleration for the animation —e.g. kony.anim.EASE_IN_OUT.
 	 */
-	kony.animations.rotate = definition;
+	kony.animations.reveal = definition;
 })((widget, duration, delay, timing) => {
 
 	kony.animations.animate(
