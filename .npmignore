@@ -15,3 +15,6 @@
 
 # Visualizer test projects
 /tests
+
+# No need to include this.
+/CONTRIBUTE.md
