@@ -1,6 +1,6 @@
 {
   "name": "kronin",
-  "version": "1.1.0-rc1",
+  "version": "1.0.2",
   "description": "A collection of useful extensions for the Kony SDK.",
   "main": "bin/kronin.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "q": "^1.5.1"
   },
   "scripts": {
+    "postinstall": "browserify -p tinyify node_modules/q/q.js -o src/q.js",
     "prepare": "browserify src/main.js -o bin/kronin.js",
     "pretest": "watchify src/main.js -o tests/workspace/KroninTest1/modules/kronin.js"
   }
