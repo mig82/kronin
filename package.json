@@ -27,7 +27,6 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "q": "^1.5.1"
   },
   "scripts": {
     "prepare": "browserify src/main.js -o bin/kronin.js",
