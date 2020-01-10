@@ -1,3 +1,4 @@
+const Q = require("./q");
 require("./q2k.fabric");
 
 ((definition) => {

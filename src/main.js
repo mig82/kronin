@@ -26,7 +26,10 @@ require("./setTimeout");
 // The npm postinstall script will have placed a minified version of Q in the
 // src folder. Since Q's set-up will consider this a CommonJS environment, we
 // can require it and then declare it as a global.
-const Q = require("./q");
+//var self = kony;
+//require("./q");
+require("q");
+var Q = kony.Q;
 if(typeof Q === "undefined"){
 	alert("Q was not properly defined!");
 }
@@ -39,3 +42,4 @@ else{
 	require("./q2k.fabric.login");
 	require("./q2k.fabric.invoke");
 }
+module.exports = Q;

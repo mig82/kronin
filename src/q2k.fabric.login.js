@@ -5,12 +5,12 @@ require("./q2k.fabric");
 	 * Invoke a Fabric identity service to authenticate in a promisy way.
 	 * */
 	kony.q2k.fabric.login = definition;
-})((idServiceName, getProfile, username, password) => {
+})((idServiceName, getProfile, options) => {
 
 	var client = kony.sdk.getCurrentInstance();
 	return Q.Promise(function(resolve, reject/*, notify*/) {
 		var idp = client.getIdentityService(idServiceName);
-		idp.login({ username,password }, (/*response*/)=>{ //onSuccess
+		idp.login(options, (/*response*/)=>{ //onSuccess
 
 			idp.getProfile(getProfile,
 					(response) => {
