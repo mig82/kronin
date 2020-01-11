@@ -1,8 +1,6 @@
 
 require("./aaa");
 
-require("./doNothing");
-
 require("./router");
 require("./mvc.wire");
 

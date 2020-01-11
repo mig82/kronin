@@ -1,5 +1,4 @@
 require("./animations");
-require("./doNothing");
 
 ((definition) => {
 	/**
@@ -38,9 +37,8 @@ require("./doNothing");
 	try{
 		var animation = kony.ui.createAnimation(steps);
 		widget.animate(animation, config, {
-			/*globals doNothing*/
-			animationStart: doNothing,
-			animationEnd: doNothing
+			animationStart: () => {},
+			animationEnd: () => {}
 		});
 	}
 	catch(e){
