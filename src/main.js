@@ -22,6 +22,3 @@ require("./animations");
 require("./animations.rotate");
 require("./animations.animate");
 require("./animations.reveal");
-
-//Define a global setTimeout function.
-require("./setTimeout");
