@@ -22,3 +22,6 @@ require("./animations");
 require("./animations.rotate");
 require("./animations.animate");
 require("./animations.reveal");
+
+require("./timer.cancel2");
+require("./timer.schedule2");
