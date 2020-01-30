@@ -14,8 +14,7 @@ This will install Krōnin into `[project_root]/modules/node_modules/kronin`. The
 
 ![node_modules and Krōnin as Vis app groups](./pics/kronin_app_group.png "node_modules and Krōnin as Vis app groups").
 
-
-## kony.amplify
+## PubSub
 
 An adaptation of [AmplifyJS's PubSub Core](http://amplifyjs.com/api/pubsub/), this namespace allows you to leverage the PubSub
 pattern in your applications. Like AmplifyJS, this supports these three functions:
@@ -54,7 +53,31 @@ kony.amplify.isSubscribed("foo", onFoo);
 //true
 ```
 
-## kony.application
+## Animations
+
+### animate
+
+```javascript
+animations.animate(widget, animProperty, initialValue, finalValue, duration, delay, timing)
+```
+
+### reveal
+
+TODO
+
+```javascript
+TODO
+```
+
+### rotate
+
+TODO
+
+```javascript
+TODO
+```
+
+## Application
 
 ### setAppBarColor(string)
 
@@ -71,7 +94,39 @@ kony.application.setAppBarColor("cc0000");
 * isIos()
 * isWeb()
 
-## kony.i18n
+## Internationalization
+
+### i18n.getCurrencyAmount
+
+TODO
+
+```javascript
+TODO
+```
+
+### i18n.getCurrentLocale2
+
+TODO
+
+```javascript
+TODO
+```
+
+### i18n.getDecimalSeparator
+
+TODO
+
+```javascript
+TODO
+```
+
+### i18n.getFormattedAmount
+
+TODO
+
+```javascript
+TODO
+```
 
 ### getLocalizedString2(string, object)
 
@@ -88,6 +143,22 @@ kony.i18n.getLocalizedString2("message.greeting", {
 //Hello Miguel, count to 3!
 ```
 
+### i18n.getThousandsSeparator
+
+TODO
+
+```javascript
+TODO
+```
+
+### i18n.localizeWidget
+
+TODO
+
+```javascript
+TODO
+```
+
 ## kony.mvc
 
 ### genAccessors(controller, Array)
@@ -97,16 +168,16 @@ Define a component's setters and getters for any custom fields in one line by ju
 ```javascript
 define(function() {
 	return{
-		constructor: function() {/*...*/},
+		constructor: function() {...},
 		initGettersSetters: function() {
 			kony.mvc.genAccessors(this, ["foo","bar"]);
 			//Defines accessors getFoo, setFoo, getBar and setBar
 		}
 	}
-}
+})
 ```
 
-### patch(controller)
+### wire(controller)
 
 Binds any `init`, `preShow`, `postShow` or `onHide` functions defined in the current controller to the corresponding view's life cycle events, without having to use actions or additional code to do it.
 These functions are also bound with a wrapping `try/catch` statement, so that if there are syntax errors in the functions defined, they'll be easier to debug -e.g. This could be the body of a forms's controller.:
@@ -115,10 +186,10 @@ These functions are also bound with a wrapping `try/catch` statement, so that if
 define(function(){
 
 	return{
-		init: function(){/*...*/},
-		preShow: function(){/*...*/},
-		postShow: function(){/*...*/},
-		onHide: function(){/*...*/},
+		init: function(){...},
+		preShow: function(){...},
+		postShow: function(){...},
+		onHide: function(){...},
 		onNavigate: function(){
 			kony.mvc.patch(this);
 			//Now init, preShow, postShow, onHide are all bound.
@@ -129,7 +200,7 @@ define(function(){
 
 ## router
 
-A convenient way to do all the navigations from a centralised place, which also provides
+A convenient way to do all the navigations from a centralized place, which also provides
 a history of the navigations, allowing you to go back in a logical way.
 When used along with `kony.mvc.patch` this router also allows you to query which the current form is — something that's not readily possible in MVC projects.
 
@@ -140,7 +211,25 @@ When used along with `kony.mvc.patch` this router also allows you to query which
 * goHome(context)
 * getHistory()
 
-## kony.ui
+## Timers
+
+## cancel2
+
+TODO
+
+```javascript
+TODO
+```
+
+## schedule2
+
+TODO
+
+```javascript
+TODO
+```
+
+## UI
 
 ### getDescendants(containerWidget, includeParent, function)
 
