@@ -1,0 +1,102 @@
+{
+  "android": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "androidwearos": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "background_color": "ffffffff",
+  "bg_type": "one",
+  "border_color": "ffffffff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "fontSizeInPx": false,
+  "font_color": "01225cff",
+  "font_name": "FontAwesome",
+  "font_size": 70,
+  "font_style": "normal",
+  "font_weight": "400",
+  "ipad": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "iphone": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "isDefaultSkin": false,
+  "kiosk": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "kuid": "sbb0a72df75040548dbf03b762662258",
+  "spaan": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaandroidtablet": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spabb": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaip": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spaipad": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spawindowstablet": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "spawinphone8": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "tabrcandroid": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "wType": "Button",
+  "watchos": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "windows8": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  },
+  "winphone8": {
+    "font_name": "FontAwesome",
+    "font_size": 70,
+    "isForked": false
+  }
+}

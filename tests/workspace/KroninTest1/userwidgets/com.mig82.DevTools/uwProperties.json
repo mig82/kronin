@@ -1,0 +1,84 @@
+{
+    "classname": "DevTools",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": true,
+                    "group": "General",
+                    "kuid": "ce80336aae3e42958e852956c6f278f8",
+                    "originalPropertyKey": "printOn",
+                    "propertyIndex": 2,
+                    "propertyKey": "printOn",
+                    "pw": {
+                        "displayName": "Output",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "c090d7715a3b4e939847c26ad5e972ef",
+                    "type": "boolean",
+                    "value": "true/false"
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": true,
+                    "group": "General",
+                    "kuid": "d6e66b37685f4bb99283726c27c9f75b",
+                    "originalPropertyKey": "filterOn",
+                    "propertyIndex": 3,
+                    "propertyKey": "filterOn",
+                    "pw": {
+                        "displayName": "Filter",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "c090d7715a3b4e939847c26ad5e972ef",
+                    "type": "boolean",
+                    "value": "true/false"
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "fac5ebf7a8c24555bb75babf094bd140",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "filter",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Filter",
+                        "srcWidget": "filterTextBox",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "d54d6ae5c0354474bbf3645aa0692d86"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.mig82",
+    "version": "1.0.0"
+}

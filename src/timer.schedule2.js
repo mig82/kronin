@@ -15,7 +15,7 @@ require("./timer.cancel2");
 	kony.timer.schedule2 = definition;
 })((fn, delay, repeat) => {  //eslint-disable-line no-unused-vars
 
-	var timerId = "kronin." + repeat?"intr_":"tout_" + Math.random();
+	var timerId = "kronin." + (repeat?"intr_":"tout_") + Math.random();
 	kony.timer.schedule(timerId, () => {
 		fn();
 		if(!repeat) kony.timer.cancel2(timerId);
