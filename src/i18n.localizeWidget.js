@@ -9,7 +9,7 @@ require("./i18n.getLocalizedString2");
 	(widget) => {
 		var localize = kony.i18n.getLocalizedString2 || kony.i18n.getLocalizedString;
 		if(widget.text){
-			widget.text = localize(widget.text);
+			widget.text = localize(widget.text) || widget.text;
 		}
 	}
 });
