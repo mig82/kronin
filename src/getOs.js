@@ -2,7 +2,7 @@
 
 	const OS_ANDROID = "android";
 	const OS_IOS = "ios";
-	const MOBILE_WEB = "mobile_web";
+	const OS_WEB = "web";
 
 	var os;
 	var deviceInfo = kony.os.deviceInfo();
@@ -33,9 +33,9 @@
 			if(os === "i-phone" || os === "i-pad"){
 				os = OS_IOS;
 			}
-			else if(os === "thinclient"){
+			else if(kony.os.isWeb()){
 				//TODO:This needs more thought. Web is not really an OS.
-				os = MOBILE_WEB;
+				os = OS_WEB;
 			}
 		}
 		var message2 = `os: ${os}`;
@@ -56,6 +56,6 @@
 
 	kony.os.isWeb = () => {
 		//TODO: Determine which other values other than thinclient mean it's a web app -e.g. responsive, PWA, desktop web, etc.
-		return getOs() === MOBILE_WEB;
+		return typeof window === "object" && typeof document === "object";
 	}
 })();
