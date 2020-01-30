@@ -19,6 +19,6 @@ require("./timer.cancel2");
 	kony.timer.schedule(timerId, () => {
 		fn();
 		if(!repeat) kony.timer.cancel2(timerId);
-	}, delay || 0, repeat);
+	}, parseFloat(delay) || 0, repeat);
 	return timerId;
 });
