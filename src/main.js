@@ -1,6 +1,10 @@
 
 require("./aaa");
 
+kony.kronin = {
+	version: require('./package.json').version
+}
+
 require("./amplify");
 
 require("./animations");
