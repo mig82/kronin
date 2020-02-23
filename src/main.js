@@ -2,7 +2,7 @@
 require("./aaa");
 
 kony.kronin = {
-	version: require('./package.json').version
+	version: "2.0.0" //TODO: Take this from ('../package.json').version
 }
 
 require("./amplify");
