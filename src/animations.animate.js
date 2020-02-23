@@ -30,18 +30,23 @@ require("./animations");
 	var config = {
 		duration: duration || 0.5,
 		iterationCount: 1,
-		delay: delay || 0.25,
+		delay: delay || 0,
 		fillMode: kony.anim.FILL_MODE_FORWARDS
 	};
 
-	try{
-		var animation = kony.ui.createAnimation(steps);
-		widget.animate(animation, config, {
-			animationStart: () => {},
-			animationEnd: () => {}
-		});
-	}
-	catch(e){
-		kony.print(`Problem animating:\n\t${e}`);
-	}
+	return new Promise((resolve, reject) => {
+		try{
+			var animation = kony.ui.createAnimation(steps);
+			widget.animate(animation, config, {
+				animationStart: () => {},
+				animationEnd: (source, animationHandle, elapsedTime) => {
+					resolve({source, animationHandle, elapsedTime});
+				}
+			});
+		}
+		catch(e){
+			kony.print(`kronin.animations.animate failed to animate:\n\t${e}`);
+			reject(e);
+		}
+	});
 });

@@ -13,7 +13,7 @@ require("./animations.animate");
 	kony.animations.reveal = definition;
 })((widget, duration, delay, timing) => {
 
-	kony.animations.animate(
+	return kony.animations.animate(
 		widget,
 		"opacity", 0, 1,
 		duration || 0.5,
