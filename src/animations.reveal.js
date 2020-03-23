@@ -2,7 +2,7 @@ require("./animations.animate");
 
 ((definition) => {
 	/**
-	 * Shortand function to create an animation to reveal a widget from opacity 0
+	 * Shorthand function to create an animation to reveal a widget from opacity 0
 	 * to opacity 1, using common default settings such as kony.anim.FILL_MODE_FORWARDS.
 	 *
 	 * @param {widget} widget Any UI component.

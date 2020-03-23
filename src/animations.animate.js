@@ -2,7 +2,7 @@ require("./animations");
 
 ((definition) => {
 	/**
-	 * Shortand function to create an animation on an arbitrary property of a widget by
+	 * Shorthand function to create an animation on an arbitrary property of a widget by
 	 * simply providing an initial value and a final value for it, and by using common
 	 * default settings such as kony.anim.FILL_MODE_FORWARDS.
 	 *

@@ -1,11 +1,13 @@
 {
   "name": "kronin",
-  "version": "2.0.0-rc2",
+  "version": "2.0.0-rc5",
   "description": "A collection of useful extensions for the Kony SDK.",
   "main": "bin/kronin.js",
   "scripts": {
     "prepare": "browserify src/main.js -o bin/kronin.js",
-    "pretest": "watchify src/main.js -o tests/workspace/KroninTest1/modules/kronin.js"
+    "copypack": "mkdir -p tests/workspace/KroninTest1/modules/node_modules/kronin && cp package.json tests/workspace/KroninTest1/modules/node_modules/kronin",
+    "watch": "watchify src/main.js -o tests/workspace/KroninTest1/modules/node_modules/kronin/bin/kronin.js",
+    "pretest": "npm run copypack && npm run watch"
   },
   "repository": {
     "type": "git",

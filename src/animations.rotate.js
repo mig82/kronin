@@ -3,7 +3,7 @@ require("./animations");
 ((definition) => {
 	/**
 	 * Create a linear rotation animation without having to create multi-step
-	 * animation. This function will dinamically generate all the animation
+	 * animation. This function will dynamically generate all the animation
 	 * steps needed to do the rotation and proportionally(as best as possible)
 	 * assign each a part of the duration you specify in order to make it as
 	 * smooth as possible.
@@ -45,6 +45,14 @@ require("./animations");
 		clockwise? sign = -1: sign = 1;
 
 		var absRotation = 0;
+
+		/* TODO: Calculate the steps so that each rotates the same amount of
+		 * degrees. Need the greatest common divisor for 90 (BREAK_POINT),
+		 * 100 (Total animation steps) and deg.
+		 * Use https://mathjs.org/docs/reference/functions/gcd.html
+		 * The calculation would be gcd(90, 100, deg)
+		 * 115 degrees: gcd(90, 100, 115)=5 -> So 20 (100/5) steps x 23 (115/5) degrees each.
+		 * */
 
 		//Calculate each step.
 		do{
